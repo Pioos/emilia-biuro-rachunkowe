@@ -1,0 +1,15 @@
+# System / OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Agent / AI tools
+.agent/
+.gemini/
+
+# Node (jeśli kiedyś będzie użyte)
+node_modules/

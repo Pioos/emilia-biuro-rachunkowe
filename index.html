@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RemTax Iwona Janiak – Biuro Rachunkowe | Zduńska Wola</title>
+  <meta name="description"
+    content="Profesjonalne biuro rachunkowe RemTax Iwona Janiak z certyfikatami Ministerstwa Finansów. Kompleksowa obsługa księgowa firm i osób fizycznych. Zduńska Wola i okolice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo" aria-label="RemTax Iwona Janiak – strona główna">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <polygon points="20,3 37,13.5 37,26.5 20,37 3,26.5 3,13.5" fill="none" stroke="var(--gold)"
+            stroke-width="1.5" />
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Cormorant Garamond, serif"
+            font-size="14" font-weight="600" fill="var(--gold)">R</text>
+        </svg>
+        <span class="logo-text">RemTax<em>&nbsp;Iwona Janiak</em></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#uslugi">Usługi</a></li>
+        <li><a href="#o-nas">O nas</a></li>
+        <li><a href="#certyfikaty">Certyfikaty</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#kontakt" class="nav-cta">Bezpłatna konsultacja</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-bg-pattern" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="heroGlow" cx="70%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.12" />
+            <stop offset="100%" stop-color="#0B1E3D" stop-opacity="0" />
+          </radialGradient>
+          <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#C9A84C" stroke-width="0.3" stroke-opacity="0.3" />
+          </pattern>
+        </defs>
+        <rect width="1440" height="900" fill="url(#grid)" />
+        <rect width="1440" height="900" fill="url(#heroGlow)" />
+        <!-- decorative geometric lines -->
+        <line x1="900" y1="0" x2="1440" y2="450" stroke="#C9A84C" stroke-width="0.5" stroke-opacity="0.2" />
+        <line x1="1000" y1="0" x2="1440" y2="350" stroke="#C9A84C" stroke-width="0.5" stroke-opacity="0.15" />
+        <line x1="800" y1="0" x2="1440" y2="600" stroke="#C9A84C" stroke-width="0.3" stroke-opacity="0.1" />
+      </svg>
+    </div>
+
+    <div class="hero-content container">
+      <div class="hero-badge reveal-up">
+        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <circle cx="6" cy="6" r="5" fill="none" stroke="var(--gold)" stroke-width="1" />
+          <circle cx="6" cy="6" r="2" fill="var(--gold)" />
+        </svg>
+        Certyfikowani przez Ministerstwo Finansów
+      </div>
+      <h1 class="hero-title reveal-up" style="animation-delay:.1s">
+        Księgowość,<br />
+        której możesz<br />
+        <em>zaufać</em>
+      </h1>
+      <p class="hero-subtitle reveal-up" style="animation-delay:.2s">
+        Kompleksowa obsługa finansowo-księgowa dla firm każdej wielkości.<br />
+        Ponad 18 lat doświadczenia. Zduńska Wola i cały kraj.
+      </p>
+      <div class="hero-actions reveal-up" style="animation-delay:.3s">
+        <a href="#kontakt" class="btn btn-primary">Umów bezpłatną konsultację</a>
+        <a href="#uslugi" class="btn btn-ghost">Nasze usługi</a>
+      </div>
+      <div class="hero-stats reveal-up" style="animation-delay:.4s">
+        <div class="stat">
+          <span class="stat-num" data-target="250">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Obsługiwanych firm</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="18">0</span><span class="stat-suffix"> lat</span>
+          <span class="stat-label">Na rynku</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="99">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Zadowolonych klientów</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-card-stack">
+        <div class="doc-card doc-card-1">
+          <div class="doc-line doc-line-gold"></div>
+          <div class="doc-line"></div>
+          <div class="doc-line short"></div>
+          <div class="doc-stamp">ZŁOŻONO</div>
+        </div>
+        <div class="doc-card doc-card-2">
+          <div class="doc-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5">
+              <path d="M9 12l2 2 4-4" />
+              <path d="M12 3L4 7v5c0 4.4 3.4 8.5 8 9.5 4.6-1 8-5.1 8-9.5V7l-8-4z" />
+            </svg>
+            <span>Deklaracja CIT</span>
+          </div>
+          <div class="doc-line"></div>
+          <div class="doc-line short"></div>
+          <div class="doc-line"></div>
+          <div class="doc-badge">✓</div>
+        </div>
+        <div class="doc-card doc-card-3">
+          <div class="doc-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
+          </div>
+          <div class="doc-line"></div>
+          <div class="doc-line short"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== DIVIDER ===== -->
+  <div class="section-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,60 L1440,0 L1440,60 Z" fill="var(--bg-alt)" />
+    </svg>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="uslugi">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Obszary działania</span>
+        <h2 class="section-title">Pełen zakres<br /><em>usług księgowych</em></h2>
+        <p class="section-desc">Świadczymy kompleksowe usługi finansowo-księgowe dostosowane do potrzeb Twojego biznesu.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal-up" style="animation-delay:.05s" tabindex="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+          </div>
+          <h3>Pełna księgowość</h3>
+          <p>Prowadzenie ksiąg rachunkowych zgodnie z ustawą o rachunkowości. Bilans, rachunek wyników, sprawozdania
+            finansowe.</p>
+          <ul class="service-list">
+            <li>Księgi handlowe</li>
+            <li>Sprawozdania GUS / NBP</li>
+            <li>Ewidencja środków trwałych</li>
+          </ul>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="animation-delay:.1s" tabindex="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="5" width="20" height="14" rx="2" />
+              <path d="M2 10h20" />
+            </svg>
+          </div>
+          <h3>KPiR i ryczałt</h3>
+          <p>Uproszczona ewidencja przychodów i rozchodów dla małych firm oraz rozliczenia ryczałtowe.</p>
+          <ul class="service-list">
+            <li>Podatkowa KPiR</li>
+            <li>Ewidencja dla ryczałtu</li>
+            <li>Karty podatkowe</li>
+          </ul>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="animation-delay:.15s" tabindex="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3>Kadry i płace</h3>
+          <p>Kompleksowa obsługa kadrowo-płacowa — od umów po rozliczenia ZUS i deklaracje podatkowe pracowników.</p>
+          <ul class="service-list">
+            <li>Lista płac i paski</li>
+            <li>Deklaracje ZUS / PIT-11</li>
+            <li>Obsługa urlopów i L4</li>
+          </ul>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="animation-delay:.2s" tabindex="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+          </div>
+          <h3>VAT i JPK</h3>
+          <p>Prawidłowe rozliczenia podatku VAT, sporządzanie plików JPK oraz reprezentacja przed Urzędem Skarbowym.</p>
+          <ul class="service-list">
+            <li>JPK_V7M / JPK_V7K</li>
+            <li>Rejestracja VAT-UE</li>
+            <li>Obsługa korekt</li>
+          </ul>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="animation-delay:.25s" tabindex="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </div>
+          <h3>Doradztwo podatkowe</h3>
+          <p>Optymalizacja podatkowa, interpretacje, bieżące doradztwo w wyborze formy opodatkowania i struktury
+            biznesowej.</p>
+          <ul class="service-list">
+            <li>Optymalizacja CIT / PIT</li>
+            <li>Interpretacje podatkowe</li>
+            <li>Przeglądy podatkowe</li>
+          </ul>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="service-card reveal-up" style="animation-delay:.3s" tabindex="0">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+          </div>
+          <h3>Zakładanie spółek</h3>
+          <p>Pomoc w rejestracji działalności, wyborze formy prawnej i przygotowaniu niezbędnej dokumentacji
+            korporacyjnej.</p>
+          <ul class="service-list">
+            <li>Rejestracja w KRS / CEIDG</li>
+            <li>Umowy spółek</li>
+            <li>Regulaminy i statuty</li>
+          </ul>
+          <div class="service-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OWNER PROFILE ===== -->
+  <section class="section owner" id="o-nas">
+    <div class="container owner-layout">
+      <div class="owner-visual reveal-left">
+        <div class="owner-portrait">
+          <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" aria-label="Portret Iwony Janiak">
+            <defs>
+              <radialGradient id="skinGrad" cx="50%" cy="35%" r="50%">
+                <stop offset="0%" stop-color="#F5DEB3" />
+                <stop offset="100%" stop-color="#DEB887" />
+              </radialGradient>
+              <radialGradient id="bgCircle" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#1A3356" />
+                <stop offset="100%" stop-color="#0B1E3D" />
+              </radialGradient>
+              <clipPath id="portraitClip">
+                <ellipse cx="160" cy="370" rx="160" ry="200" />
+              </clipPath>
+            </defs>
+            <!-- Background -->
+            <rect width="320" height="400" fill="#0D2244" />
+            <!-- Suit + body -->
+            <ellipse cx="160" cy="420" rx="110" ry="130" fill="#0E2952" />
+            <!-- Neck -->
+            <rect x="143" y="215" width="34" height="55" rx="8" fill="url(#skinGrad)" />
+            <!-- Shirt collar -->
+            <polygon points="130,240 160,270 190,240 200,280 120,280" fill="white" opacity="0.9" />
+            <!-- Jacket lapels -->
+            <polygon points="120,280 160,300 200,280 210,380 110,380" fill="#0A1F40" />
+            <!-- Head -->
+            <ellipse cx="160" cy="185" rx="58" ry="68" fill="url(#skinGrad)" />
+            <!-- Hair -->
+            <ellipse cx="160" cy="130" rx="60" ry="40" fill="#3B2314" />
+            <ellipse cx="107" cy="170" rx="18" ry="35" fill="#3B2314" />
+            <ellipse cx="213" cy="170" rx="18" ry="35" fill="#3B2314" />
+            <!-- Eyes -->
+            <ellipse cx="138" cy="185" rx="9" ry="7" fill="white" />
+            <ellipse cx="182" cy="185" rx="9" ry="7" fill="white" />
+            <circle cx="140" cy="186" r="5" fill="#3B2314" />
+            <circle cx="184" cy="186" r="5" fill="#3B2314" />
+            <circle cx="142" cy="184" r="1.5" fill="white" />
+            <circle cx="186" cy="184" r="1.5" fill="white" />
+            <!-- Eyebrows -->
+            <path d="M128 174 Q138 170 148 174" stroke="#3B2314" stroke-width="2" fill="none" />
+            <path d="M172 174 Q182 170 192 174" stroke="#3B2314" stroke-width="2" fill="none" />
+            <!-- Nose -->
+            <path d="M156 195 Q152 208 155 214 Q160 218 165 214 Q168 208 164 195" fill="none" stroke="#C4956A"
+              stroke-width="1.5" />
+            <!-- Smile -->
+            <path d="M147 222 Q160 232 173 222" stroke="#C45D5D" stroke-width="2" fill="none" stroke-linecap="round" />
+            <!-- Gold earrings -->
+            <circle cx="102" cy="198" r="5" fill="var(--gold)" opacity="0.8" />
+            <circle cx="218" cy="198" r="5" fill="var(--gold)" opacity="0.8" />
+            <!-- Gold frame accent -->
+            <rect x="0" y="0" width="320" height="400" fill="none" stroke="var(--gold)" stroke-width="2"
+              opacity="0.3" />
+            <!-- Gold corner accents -->
+            <path d="M0 30 L0 0 L30 0" stroke="var(--gold)" stroke-width="2" fill="none" />
+            <path d="M290 0 L320 0 L320 30" stroke="var(--gold)" stroke-width="2" fill="none" />
+            <path d="M0 370 L0 400 L30 400" stroke="var(--gold)" stroke-width="2" fill="none" />
+            <path d="M290 400 L320 400 L320 370" stroke="var(--gold)" stroke-width="2" fill="none" />
+          </svg>
+        </div>
+        <div class="owner-card-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+            aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
+          Licencjonowany doradca podatkowy
+        </div>
+      </div>
+
+      <div class="owner-content reveal-right">
+        <span class="section-tag">Profil właściciela</span>
+        <h2 class="section-title">Iwona<br /><em>Janiak</em></h2>
+        <p class="owner-title">Biegły księgowy · Doradca podatkowy · Nr licencji 68321/2006</p>
+        <blockquote class="owner-quote">
+          „Wierzę, że dobra księgowość to nie tylko zgodność z przepisami — to fundament strategicznych decyzji
+          biznesowych.”
+        </blockquote>
+        <p class="owner-bio">
+          Właścicielka biura rachunkowego RemTax z siedzibą w Zduńskiej Woli. Od ponad 18 lat świadczy profesjonalne
+          usługi księgowe dla przedsiębiorców z regionu łódzkiego i całej Polski. Wpisana na listę doradców podatkowych
+          prowadzoną przez Krajową Izbę Doradców Podatkowych.
+        </p>
+        <div class="owner-credentials">
+          <div class="credential">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <div>
+              <strong>Certyfikat MF nr II/5891/2007</strong>
+              <span>Usługowe prowadzenie ksiąg rachunkowych</span>
+            </div>
+          </div>
+          <div class="credential">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+              aria-hidden="true">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+            <div>
+              <strong>Członek SKWP i KIDP</strong>
+              <span>Stowarzyszenie Księgowych w Polsce</span>
+            </div>
+          </div>
+          <div class="credential">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+              aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg>
+            <div>
+              <strong>18+ lat doświadczenia</strong>
+              <span>Specjalista ds. MSP i holdingów</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATES ===== -->
+  <section class="section certificates" id="certyfikaty">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Uprawnienia</span>
+        <h2 class="section-title">Certyfikaty<br /><em>Ministerstwa Finansów</em></h2>
+        <p class="section-desc">Nasze usługi świadczone są na podstawie oficjalnych uprawnień nadanych przez
+          Ministerstwo Finansów Rzeczypospolitej Polskiej.</p>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card reveal-up" style="animation-delay:.05s">
+          <div class="cert-seal">
+            <svg viewBox="0 0 100 100" aria-label="Pieczęć certyfikatu Ministerstwa Finansów">
+              <defs>
+                <radialGradient id="sealGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#1E3F6E" />
+                  <stop offset="100%" stop-color="#0B1E3D" />
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="48" fill="url(#sealGrad)" stroke="var(--gold)" stroke-width="1.5" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="0.8"
+                stroke-dasharray="3 2" />
+              <!-- Polish Eagle simplified -->
+              <text x="50" y="43" text-anchor="middle" font-size="22" fill="var(--gold)">🦅</text>
+              <text x="50" y="60" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="6"
+                fill="var(--gold-light)" letter-spacing="1">MINISTERSTWO</text>
+              <text x="50" y="68" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="6"
+                fill="var(--gold-light)" letter-spacing="1">FINANSÓW RP</text>
+            </svg>
+          </div>
+          <div class="cert-body">
+            <h3>Uprawnienia do usługowego prowadzenia ksiąg rachunkowych</h3>
+            <p class="cert-num">Nr II/5891/2007</p>
+            <p>Nadane przez Ministerstwo Finansów na podstawie art. 76a ustawy o rachunkowości. Uprawnia do świadczenia
+              usług w zakresie prowadzenia ksiąg rachunkowych, podatkowej księgi przychodów i rozchodów oraz ewidencji
+              dla potrzeb ryczałtu.</p>
+            <div class="cert-meta">
+              <span>Wydane: 14 marca 2007</span>
+              <span class="cert-status">
+                <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                  <circle cx="5" cy="5" r="4" fill="#4CAF50" />
+                </svg>
+                Aktywny
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up" style="animation-delay:.1s">
+          <div class="cert-seal">
+            <svg viewBox="0 0 100 100" aria-label="Pieczęć certyfikatu KIDP">
+              <defs>
+                <radialGradient id="sealGrad2" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#1E3F6E" />
+                  <stop offset="100%" stop-color="#0B1E3D" />
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="48" fill="url(#sealGrad2)" stroke="var(--gold)" stroke-width="1.5" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="0.8"
+                stroke-dasharray="3 2" />
+              <text x="50" y="43" text-anchor="middle" font-size="20" fill="var(--gold)">⚖</text>
+              <text x="50" y="59" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="5.5"
+                fill="var(--gold-light)" letter-spacing="0.8">KRAJOWA IZBA</text>
+              <text x="50" y="67" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="5.5"
+                fill="var(--gold-light)" letter-spacing="0.8">DORADCÓW POD.</text>
+            </svg>
+          </div>
+          <div class="cert-body">
+            <h3>Wpis na listę doradców podatkowych</h3>
+            <p class="cert-num">Nr 68321/2006</p>
+            <p>Wpis na listę doradców podatkowych prowadzoną przez Krajową Izbę Doradców Podatkowych — organ samorządu
+              zawodowego doradców podatkowych w Polsce.</p>
+            <div class="cert-meta">
+              <span>Wpis: 22 listopada 2006</span>
+              <span class="cert-status">
+                <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                  <circle cx="5" cy="5" r="4" fill="#4CAF50" />
+                </svg>
+                Aktywny
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up" style="animation-delay:.15s">
+          <div class="cert-seal">
+            <svg viewBox="0 0 100 100" aria-label="Pieczęć certyfikatu SKWP">
+              <defs>
+                <radialGradient id="sealGrad3" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#1E3F6E" />
+                  <stop offset="100%" stop-color="#0B1E3D" />
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="48" fill="url(#sealGrad3)" stroke="var(--gold)" stroke-width="1.5" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="0.8"
+                stroke-dasharray="3 2" />
+              <text x="50" y="43" text-anchor="middle" font-size="20" fill="var(--gold)">📊</text>
+              <text x="50" y="59" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="5.5"
+                fill="var(--gold-light)" letter-spacing="0.8">STOWARZYSZENIE</text>
+              <text x="50" y="67" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="5.5"
+                fill="var(--gold-light)" letter-spacing="0.8">KSIĘGOWYCH W PL</text>
+            </svg>
+          </div>
+          <div class="cert-body">
+            <h3>Biegły księgowy – Stowarzyszenie Księgowych w Polsce</h3>
+            <p class="cert-num">Nr BK/2009/14820</p>
+            <p>Tytuł biegłego księgowego nadany przez Stowarzyszenie Księgowych w Polsce, potwierdzający najwyższe
+              kwalifikacje w zakresie rachunkowości i finansów przedsiębiorstw.</p>
+            <div class="cert-meta">
+              <span>Nadany: 08 stycznia 2009</span>
+              <span class="cert-status">
+                <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+                  <circle cx="5" cy="5" r="4" fill="#4CAF50" />
+                </svg>
+                Aktywny
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-footer reveal-up">
+        <div class="ubezpieczenie-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+            aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+          <div>
+            <strong>Umowa ubezpieczenia OC</strong>
+            <span>Biuro posiada obowiązkowe ubezpieczenie odpowiedzialności cywilnej o sumie gwarancyjnej 1 000 000 PLN,
+              zgodnie z rozporządzeniem Ministra Finansów.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Opinie klientów</span>
+        <h2 class="section-title">Co mówią<br /><em>nasi klienci</em></h2>
+      </div>
+      <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="Ocena 5 na 5">
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <blockquote>„Współpracujemy z biurem od 7 lat. Pani Anna jest zawsze dostępna, reaguje błyskawicznie na zmiany
+            przepisów i aktywnie chroni nasze interesy podatkowe."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">MK</div>
+            <div>
+              <strong>Marek Kowalczyk</strong>
+              <span>Prezes Zarządu, Kowalczyk Transport Sp. z o.o.</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="Ocena 5 na 5">
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <blockquote>„Skomplikowane rozliczenia VAT dla sklepu e-commerce – biuro poradziło sobie znakomicie.
+            Profesjonalizm i bezpieczeństwo na najwyższym poziomie."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">AW</div>
+            <div>
+              <strong>Agnieszka Wiśniewska</strong>
+              <span>Właścicielka, HomeStyle by AW</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="Ocena 5 na 5">
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <blockquote>„Pani Anna pomogła nam przy przekształceniu działalności w spółkę. Całość przebiegła sprawnie, bez
+            zbędnych komplikacji. Dziękujemy za zaangażowanie!"</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">TN</div>
+            <div>
+              <strong>Tomasz Nowak</strong>
+              <span>Wspólnik, Nowak &amp; Partnerzy Architekci</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars" aria-label="Ocena 5 na 5">
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <blockquote>„Obsługa kadrowo-płacowa dla 40 pracowników – zero błędów, zawsze na czas. Polecam każdemu, kto
+            ceni profesjonalizm i rzetelność."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">KZ</div>
+            <div>
+              <strong>Katarzyna Zielińska</strong>
+              <span>Dyrektor HR, MedGroup Polska Sp. z o.o.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials-dots" id="testimonialsDots" role="tablist" aria-label="Nawigacja opinii">
+        <button class="dot active" data-index="0" role="tab" aria-selected="true" aria-label="Opinia 1"></button>
+        <button class="dot" data-index="1" role="tab" aria-selected="false" aria-label="Opinia 2"></button>
+        <button class="dot" data-index="2" role="tab" aria-selected="false" aria-label="Opinia 3"></button>
+        <button class="dot" data-index="3" role="tab" aria-selected="false" aria-label="Opinia 4"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="section cta-banner">
+    <div class="cta-banner-bg" aria-hidden="true"></div>
+    <div class="container cta-inner">
+      <div class="reveal-up">
+        <h2>Gotowy na spokój ducha<br />w kwestiach finansowych?</h2>
+        <p>Pierwsza konsultacja jest bezpłatna. Porozmawiajmy o potrzebach Twojej firmy.</p>
+      </div>
+      <div class="cta-actions reveal-up" style="animation-delay:.15s">
+        <a href="#kontakt" class="btn btn-gold">Umów konsultację</a>
+        <a href="tel:+48432345678" class="btn btn-outline-light">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6.99h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          +48 43 234 56 78
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="kontakt">
+    <div class="container contact-layout">
+      <div class="contact-info reveal-left">
+        <span class="section-tag">Kontakt</span>
+        <h2 class="section-title">Porozmawiajmy<br />o <em>Twoich potrzebach</em></h2>
+        <div class="contact-details">
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <div>
+              <strong>Adres</strong>
+              <span>ul. Sieradzka 27<br />98-220 Zduńska Wola</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+              aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6.99h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <div>
+              <strong>Telefon</strong>
+              <a href="tel:+48432345678">+48 43 234 56 78</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <div>
+              <strong>E-mail</strong>
+              <a href="mailto:biuro@remtax.pl">biuro@remtax.pl</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <div>
+              <strong>Godziny pracy</strong>
+              <span>Pn – Pt: 8:00 – 17:00<br />Sobota: 9:00 – 13:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps embed -->
+        <div class="map-wrapper">
+          <iframe title="Mapa dojazdu – RemTax Iwona Janiak, Zduńska Wola"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2466.512!2d18.9392!3d51.6012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a3b3a4e2c3b3b%3A0x5c6f7e8d9a0b1c2d!2sSieradzka%2027%2C%2098-220%20Zdu%C5%84ska%20Wola!5e0!3m2!1spl!2spl!4v1708000000000!5m2!1spl!2spl"
+            width="100%" height="280"
+            style="border:0; border-radius:6px; filter:invert(90%) hue-rotate(180deg) saturate(0.6) brightness(0.9);"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <form class="contact-form reveal-right" id="contactForm" novalidate>
+        <h3>Wyślij wiadomość</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Imię i nazwisko <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Jan Kowalski" />
+          </div>
+          <div class="form-group">
+            <label for="company">Firma</label>
+            <input type="text" id="company" name="company" autocomplete="organization" placeholder="Nazwa firmy" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-mail <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="jan@firma.pl" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+48 600 000 000" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Interesująca usługa</label>
+          <select id="service" name="service">
+            <option value="">– Wybierz usługę –</option>
+            <option>Pełna księgowość</option>
+            <option>KPiR i ryczałt</option>
+            <option>Kadry i płace</option>
+            <option>VAT i JPK</option>
+            <option>Doradztwo podatkowe</option>
+            <option>Zakładanie spółek</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Wiadomość <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="5" required
+            placeholder="Opisz krótko potrzeby Twojej firmy…"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" id="rodo" name="rodo" required />
+          <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych przez RemTax Iwona Janiak w celu
+            obsługi zgłoszenia. <a href="#" id="openPrivacyLink">Polityka prywatności</a>.</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+          <span id="submitText">Wyślij wiadomość</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+        </button>
+        <div class="form-success" id="formSuccess" role="alert" aria-live="polite" hidden>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+            aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
+          <strong>Wiadomość wysłana!</strong>
+          <span>Odpiszemy w ciągu 24 godzin roboczych.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top container">
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="RemTax Iwona Janiak – strona główna">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <polygon points="20,3 37,13.5 37,26.5 20,37 3,26.5 3,13.5" fill="none" stroke="var(--gold)"
+              stroke-width="1.5" />
+            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+              font-family="Cormorant Garamond, serif" font-size="14" font-weight="600" fill="var(--gold)">R</text>
+          </svg>
+          <span class="logo-text">RemTax<em>&nbsp;Iwona Janiak</em></span>
+        </a>
+        <p>Profesjonalne biuro rachunkowe z certyfikatami Ministerstwa Finansów. Zduńska Wola – obsługujemy klientów z
+          całej Polski.</p>
+        <div class="footer-reg">
+          <span>NIP: 000-000-00-00</span>
+          <span class="sep">·</span>
+          <span>REGON: 000000000</span>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Stopka nawigacja">
+        <div class="footer-nav-col">
+          <h4>Usługi</h4>
+          <ul>
+            <li><a href="#uslugi">Pełna księgowość</a></li>
+            <li><a href="#uslugi">KPiR i ryczałt</a></li>
+            <li><a href="#uslugi">Kadry i płace</a></li>
+            <li><a href="#uslugi">VAT i JPK</a></li>
+            <li><a href="#uslugi">Doradztwo podatkowe</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4>Biuro</h4>
+          <ul>
+            <li><a href="#o-nas">O nas</a></li>
+            <li><a href="#certyfikaty">Certyfikaty</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#" id="openPrivacyFooter">Polityka prywatności</a></li>
+            <li><a href="#" id="openRodoFooter">RODO</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom container">
+      <span>&copy; 2025 RemTax Iwona Janiak. Wszelkie prawa zastrzeżone.</span>
+      <span>Projekt: <em>Antigravity Studio</em></span>
+    </div>
+  </footer>
+
+  <!-- ===== COOKIE BANNER ===== -->
+  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Powiadomienie o plikach cookies">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
+          flex-shrink="0" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8v4M12 16h.01" />
+        </svg>
+        <p>Ta strona używa plików cookies w celu zapewnienia prawidłowego działania. Klikając &bdquo;Akceptuję&rdquo;
+          wyrażasz zgodę zgodnie z naszą <a href="#" id="cookiePrivacyLink">Polityką prywatności</a>.</p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-ghost" id="cookieReject">Odrzuc</button>
+        <button class="btn btn-primary" id="cookieAccept">Akceptuję</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PRIVACY POLICY MODAL ===== -->
+  <div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <div class="modal-box" role="document">
+      <button class="modal-close" id="privacyClose" aria-label="Zamknij politykę prywatności">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-content">
+        <span class="section-tag">Dokument prawny</span>
+        <h2 id="privacyTitle">Polityka prywatności<br /><em>RemTax Iwona Janiak</em></h2>
+
+        <h3>1. Administrator danych</h3>
+        <p>Administratorem danych osobowych jest <strong>Iwona Janiak prowadząca działalność gospodarczą pod nazwą
+            RemTax Iwona Janiak</strong>, ul. Sieradzka 27, 98-220 Zduńska Wola, NIP: 000-000-00-00.</p>
+
+        <h3>2. Kontakt z Administratorem</h3>
+        <p>W sprawach danych osobowych: <a href="mailto:biuro@remtax.pl">biuro@remtax.pl</a> lub <a
+            href="tel:+48432345678">+48 43 234 56 78</a>.</p>
+
+        <h3>3. Cele i podstawy przetwarzania</h3>
+        <p>Dane przetwarzamy w celu:</p>
+        <ul>
+          <li><strong>Obsługi zapytań</strong> – art. 6 ust. 1 lit. b RODO.</li>
+          <li><strong>Realizacji umów</strong> – art. 6 ust. 1 lit. b RODO.</li>
+          <li><strong>Obowiązków prawnych</strong> – art. 6 ust. 1 lit. c RODO.</li>
+          <li><strong>Marketingu własnego</strong> – art. 6 ust. 1 lit. f RODO.</li>
+        </ul>
+
+        <h3>4. Pliki cookies</h3>
+        <p>Strona używa plików cookies. Wyjór kategorie:</p>
+        <ul>
+          <li><strong>Niezbędne</strong> – wymagane do działania strony; nie wymagają zgody.</li>
+          <li><strong>Analityczne</strong> – analiza ruchu (np. Google Analytics); wymagają zgody.</li>
+          <li><strong>Marketingowe</strong> – spersonalizowane reklamy; wymagają zgody.</li>
+        </ul>
+
+        <h3>5. Odbiorcy danych</h3>
+        <p>Dane mogą być przekazywane podwykonawcom technicznym oraz organom publicznym na ich żądanie.</p>
+
+        <h3>6. Okres przechowywania</h3>
+        <p>Dane przechowujemy przez czas realizacji celu, a następnie przez okres wymagany prawem (5 lat dla
+          dokumentacji księgowej).</p>
+
+        <h3>7. Prawa osób</h3>
+        <p>Przysługuje prawo do: dostępu, sprostowania, usunięcia, ograniczenia, przenoszenia danych i wniesienia skargi
+          do UODO (ul. Stawki 2, 00-193 Warszawa).</p>
+
+        <p class="privacy-updated">Ostatnia aktualizacja: 19 lutego 2025 r.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
