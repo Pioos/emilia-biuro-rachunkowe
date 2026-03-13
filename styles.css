@@ -1670,9 +1670,9 @@ button:focus-visible {
    ====================================================== */
 .cookie-banner {
   position: fixed;
-  bottom: -160px;
+  bottom: 1rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(calc(100% + 2rem));
   width: calc(100% - 2rem);
   max-width: 860px;
   z-index: 9999;
@@ -1681,11 +1681,11 @@ button:focus-visible {
   border-radius: 8px;
   box-shadow: 0 -4px 40px rgba(0, 0, 0, .5);
   padding: 1.4rem 1.8rem;
-  transition: bottom .45s cubic-bezier(.22, .61, .36, 1);
+  transition: transform .45s cubic-bezier(.22, .61, .36, 1);
 }
 
 .cookie-banner.visible {
-  bottom: 1rem;
+  transform: translateX(-50%) translateY(0);
 }
 
 .cookie-inner {
