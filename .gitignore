@@ -13,3 +13,6 @@ desktop.ini
 
 # Node (jeśli kiedyś będzie użyte)
 node_modules/
+
+# Netlify
+.netlify/
