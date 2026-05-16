@@ -4,6 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Consent Mode v2 – MUST be first, before any analytics/GTM -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('set', 'url_passthrough', true);
+  </script>
   <title>Biuro Rachunkowe Emilia Motylska | Zduńska Wola</title>
   <meta name="description"
     content="Profesjonalne biuro rachunkowe Emilia Motylska. Kompleksowa obsługa księgowa firm i osób fizycznych. Zduńska Wola i okolice." />
@@ -19,8 +36,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Biuro Rachunkowe Emilia Motylska" />
-  <meta name="twitter:description"
-    content="Profesjonalna księgowość. Zduńska Wola i cały kraj." />
+  <meta name="twitter:description" content="Profesjonalna księgowość. Zduńska Wola i cały kraj." />
 
   <!-- Schema.org – LocalBusiness / AccountingService -->
   <script type="application/ld+json">
@@ -134,17 +150,17 @@
       </div>
       <div class="hero-stats reveal-up" style="animation-delay:.4s">
         <div class="stat">
-          <span class="stat-num" data-target="786">0</span><span class="stat-suffix"></span>
-          <span class="stat-label">333 003 – zadzwoń</span>
+          <a href="tel:+48786333003" class="stat-tel">+48 786 333 003</a>
+          <span class="stat-label">Zadzwoń</span>
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat">
-          <span class="stat-num" data-target="9">0</span><span class="stat-suffix">:00</span>
+          <span class="stat-num">9<span class="stat-suffix">:00</span></span>
           <span class="stat-label">Pn–Pt od godz.</span>
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat">
-          <span class="stat-num" data-target="15">0</span><span class="stat-suffix">:00</span>
+          <span class="stat-num">15<span class="stat-suffix">:00</span></span>
           <span class="stat-label">Pn–Pt do godz.</span>
         </div>
       </div>
@@ -292,51 +308,6 @@
           </div>
         </article>
 
-        <article class="service-card reveal-up" style="animation-delay:.25s" tabindex="0">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" />
-            </svg>
-          </div>
-          <h3>Doradztwo podatkowe</h3>
-          <p>Optymalizacja podatkowa, interpretacje, bieżące doradztwo w wyborze formy opodatkowania i struktury
-            biznesowej.</p>
-          <ul class="service-list">
-            <li>Optymalizacja CIT / PIT</li>
-            <li>Interpretacje podatkowe</li>
-            <li>Przeglądy podatkowe</li>
-          </ul>
-          <div class="service-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-        </article>
-
-        <article class="service-card reveal-up" style="animation-delay:.3s" tabindex="0">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path
-                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-              <line x1="12" y1="22.08" x2="12" y2="12" />
-            </svg>
-          </div>
-          <h3>Zakładanie spółek</h3>
-          <p>Pomoc w rejestracji działalności, wyborze formy prawnej i przygotowaniu niezbędnej dokumentacji
-            korporacyjnej.</p>
-          <ul class="service-list">
-            <li>Rejestracja w KRS / CEIDG</li>
-            <li>Umowy spółek</li>
-            <li>Regulaminy i statuty</li>
-          </ul>
-          <div class="service-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -360,10 +331,11 @@
 
       <div class="owner-content reveal-right">
         <span class=”section-tag”>Profil właściciela</span>
-        <h2 class=”section-title owner-section-title”>Emilia<br /><em>Motylska</em></h2>
+        <h2 class=”section-title owner-section-title”>Emilia <em>Motylska</em></h2>
         <p class=”owner-title”>Właścicielka · Biuro Rachunkowe Emilia Motylska</p>
         <blockquote class=”owner-quote”>
-          „Wierzę, że dobra księgowość to nie tylko zgodność z przepisami — to fundament spokojnego prowadzenia biznesu.”
+          „Wierzę, że dobra księgowość to nie tylko zgodność z przepisami — to fundament spokojnego prowadzenia
+          biznesu.”
         </blockquote>
         <p class=”owner-bio”>
           Właścicielka biura rachunkowego z siedzibą w Zduńskiej Woli przy ul. Ignacego Jana Paderewskiego 3A.
@@ -386,27 +358,27 @@
       <div class="certs-grid">
         <div class="cert-card reveal-up" style="animation-delay:.05s">
           <div class="cert-seal">
-            <svg viewBox="0 0 100 100" aria-label="Pieczęć certyfikatu Ministerstwa Finansów">
+            <svg viewBox="0 0 160 160" aria-label="Pieczęć certyfikatu Ministerstwa Finansów">
               <defs>
                 <radialGradient id="sealGrad" cx="50%" cy="50%" r="50%">
                   <stop offset="0%" stop-color="#1E3F6E" />
                   <stop offset="100%" stop-color="#0B1E3D" />
                 </radialGradient>
+                <clipPath id="circleClip">
+                  <circle cx="80" cy="80" r="62" />
+                </clipPath>
               </defs>
-              <circle cx="50" cy="50" r="48" fill="url(#sealGrad)" stroke="var(--gold)" stroke-width="1.5" />
-              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="0.8"
-                stroke-dasharray="3 2" />
-              <!-- Polish Eagle simplified -->
-              <text x="50" y="43" text-anchor="middle" font-size="22" fill="var(--gold)">🦅</text>
-              <text x="50" y="60" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="6"
-                fill="var(--gold-light)" letter-spacing="1">MINISTERSTWO</text>
-              <text x="50" y="68" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="6"
-                fill="var(--gold-light)" letter-spacing="1">FINANSÓW RP</text>
+              <circle cx="80" cy="80" r="76" fill="url(#sealGrad)" stroke="var(--gold)" stroke-width="2" />
+              <circle cx="80" cy="80" r="64" fill="none" stroke="var(--gold)" stroke-width="1"
+                stroke-dasharray="4 3" />
+              <!-- MF logo: eagle top, text bottom -->
+              <image href="mf-logo.png" x="16" y="32" width="128" height="84"
+                preserveAspectRatio="xMidYMid meet" clip-path="url(#circleClip)" />
             </svg>
           </div>
           <div class="cert-body">
             <h3>Uprawnienia do usługowego prowadzenia ksiąg rachunkowych</h3>
-            <p class="cert-num">Nr II/5891/2007</p>
+            <p class="cert-num">Nr 20002/2007</p>
             <p>Nadane przez Ministerstwo Finansów na podstawie art. 76a ustawy o rachunkowości. Uprawnia do świadczenia
               usług w zakresie prowadzenia ksiąg rachunkowych, podatkowej księgi przychodów i rozchodów oraz ewidencji
               dla potrzeb ryczałtu.</p>
@@ -422,77 +394,6 @@
           </div>
         </div>
 
-        <div class="cert-card reveal-up" style="animation-delay:.1s">
-          <div class="cert-seal">
-            <svg viewBox="0 0 100 100" aria-label="Pieczęć certyfikatu KIDP">
-              <defs>
-                <radialGradient id="sealGrad2" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#1E3F6E" />
-                  <stop offset="100%" stop-color="#0B1E3D" />
-                </radialGradient>
-              </defs>
-              <circle cx="50" cy="50" r="48" fill="url(#sealGrad2)" stroke="var(--gold)" stroke-width="1.5" />
-              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="0.8"
-                stroke-dasharray="3 2" />
-              <text x="50" y="43" text-anchor="middle" font-size="20" fill="var(--gold)">⚖</text>
-              <text x="50" y="59" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="5.5"
-                fill="var(--gold-light)" letter-spacing="0.8">KRAJOWA IZBA</text>
-              <text x="50" y="67" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="5.5"
-                fill="var(--gold-light)" letter-spacing="0.8">DORADCÓW POD.</text>
-            </svg>
-          </div>
-          <div class="cert-body">
-            <h3>Wpis na listę doradców podatkowych</h3>
-            <p class="cert-num">Nr 68321/2006</p>
-            <p>Wpis na listę doradców podatkowych prowadzoną przez Krajową Izbę Doradców Podatkowych — organ samorządu
-              zawodowego doradców podatkowych w Polsce.</p>
-            <div class="cert-meta">
-              <span>Wpis: 22 listopada 2006</span>
-              <span class="cert-status">
-                <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-                  <circle cx="5" cy="5" r="4" fill="#4CAF50" />
-                </svg>
-                Aktywny
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card reveal-up" style="animation-delay:.15s">
-          <div class="cert-seal">
-            <svg viewBox="0 0 100 100" aria-label="Pieczęć certyfikatu SKWP">
-              <defs>
-                <radialGradient id="sealGrad3" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#1E3F6E" />
-                  <stop offset="100%" stop-color="#0B1E3D" />
-                </radialGradient>
-              </defs>
-              <circle cx="50" cy="50" r="48" fill="url(#sealGrad3)" stroke="var(--gold)" stroke-width="1.5" />
-              <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="0.8"
-                stroke-dasharray="3 2" />
-              <text x="50" y="43" text-anchor="middle" font-size="20" fill="var(--gold)">📊</text>
-              <text x="50" y="59" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="5.5"
-                fill="var(--gold-light)" letter-spacing="0.8">STOWARZYSZENIE</text>
-              <text x="50" y="67" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="5.5"
-                fill="var(--gold-light)" letter-spacing="0.8">KSIĘGOWYCH W PL</text>
-            </svg>
-          </div>
-          <div class="cert-body">
-            <h3>Biegły księgowy – Stowarzyszenie Księgowych w Polsce</h3>
-            <p class="cert-num">Nr BK/2009/14820</p>
-            <p>Tytuł biegłego księgowego nadany przez Stowarzyszenie Księgowych w Polsce, potwierdzający najwyższe
-              kwalifikacje w zakresie rachunkowości i finansów przedsiębiorstw.</p>
-            <div class="cert-meta">
-              <span>Nadany: 08 stycznia 2009</span>
-              <span class="cert-status">
-                <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
-                  <circle cx="5" cy="5" r="4" fill="#4CAF50" />
-                </svg>
-                Aktywny
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div class="cert-footer reveal-up">
@@ -504,165 +405,151 @@
           </svg>
           <div>
             <strong>Umowa ubezpieczenia OC</strong>
-            <span>Biuro posiada obowiązkowe ubezpieczenie odpowiedzialności cywilnej o sumie gwarancyjnej 1 000 000 PLN,
-              zgodnie z rozporządzeniem Ministra Finansów.</span>
+            <span>Biuro posiada obowiązkowe ubezpieczenie odpowiedzialności cywilnej zgodnie z rozporządzeniem Ministra Finansów.</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== TESTIMONIALS ===== -->
-  <section class="section testimonials">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <span class="section-tag">Opinie klientów</span>
-        <h2 class="section-title">Co mówią<br /><em>nasi klienci</em></h2>
-      </div>
-      <div class="testimonials-viewport">
-      <div class="testimonials-track" id="testimonialsTrack">
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="Ocena 5 na 5">
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
+  <!-- TESTIMONIALS removed -->
+  <div style="display:none"><div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Ocena 5 na 5">
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <blockquote>„Współpracujemy z biurem od 7 lat. Pani Anna jest zawsze dostępna, reaguje błyskawicznie na
+              zmiany
+              przepisów i aktywnie chroni nasze interesy podatkowe."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">MK</div>
+              <div>
+                <strong>Marek Kowalczyk</strong>
+                <span>Prezes Zarządu, Kowalczyk Transport Sp. z o.o.</span>
+              </div>
+            </div>
           </div>
-          <blockquote>„Współpracujemy z biurem od 7 lat. Pani Anna jest zawsze dostępna, reaguje błyskawicznie na zmiany
-            przepisów i aktywnie chroni nasze interesy podatkowe."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar" aria-hidden="true">MK</div>
-            <div>
-              <strong>Marek Kowalczyk</strong>
-              <span>Prezes Zarządu, Kowalczyk Transport Sp. z o.o.</span>
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Ocena 5 na 5">
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <blockquote>„Skomplikowane rozliczenia VAT dla sklepu e-commerce – biuro poradziło sobie znakomicie.
+              Profesjonalizm i bezpieczeństwo na najwyższym poziomie."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AW</div>
+              <div>
+                <strong>Agnieszka Wiśniewska</strong>
+                <span>Właścicielka, HomeStyle by AW</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Ocena 5 na 5">
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <blockquote>„Pani Anna pomogła nam przy przekształceniu działalności w spółkę. Całość przebiegła sprawnie,
+              bez
+              zbędnych komplikacji. Dziękujemy za zaangażowanie!"</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">TN</div>
+              <div>
+                <strong>Tomasz Nowak</strong>
+                <span>Wspólnik, Nowak &amp; Partnerzy Architekci</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="Ocena 5 na 5">
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <blockquote>„Obsługa kadrowo-płacowa dla 40 pracowników – zero błędów, zawsze na czas. Polecam każdemu, kto
+              ceni profesjonalizm i rzetelność."</blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">KZ</div>
+              <div>
+                <strong>Katarzyna Zielińska</strong>
+                <span>Dyrektor HR, MedGroup Polska Sp. z o.o.</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="Ocena 5 na 5">
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-          </div>
-          <blockquote>„Skomplikowane rozliczenia VAT dla sklepu e-commerce – biuro poradziło sobie znakomicie.
-            Profesjonalizm i bezpieczeństwo na najwyższym poziomie."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar" aria-hidden="true">AW</div>
-            <div>
-              <strong>Agnieszka Wiśniewska</strong>
-              <span>Właścicielka, HomeStyle by AW</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="Ocena 5 na 5">
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-          </div>
-          <blockquote>„Pani Anna pomogła nam przy przekształceniu działalności w spółkę. Całość przebiegła sprawnie, bez
-            zbędnych komplikacji. Dziękujemy za zaangażowanie!"</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar" aria-hidden="true">TN</div>
-            <div>
-              <strong>Tomasz Nowak</strong>
-              <span>Wspólnik, Nowak &amp; Partnerzy Architekci</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="Ocena 5 na 5">
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg viewBox="0 0 24 24" fill="var(--gold)" aria-hidden="true">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-          </div>
-          <blockquote>„Obsługa kadrowo-płacowa dla 40 pracowników – zero błędów, zawsze na czas. Polecam każdemu, kto
-            ceni profesjonalizm i rzetelność."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar" aria-hidden="true">KZ</div>
-            <div>
-              <strong>Katarzyna Zielińska</strong>
-              <span>Dyrektor HR, MedGroup Polska Sp. z o.o.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div><!-- /.testimonials-viewport -->
-      <div class="testimonials-dots" id="testimonialsDots" role="tablist" aria-label="Nawigacja opinii">
-        <button class="dot active" data-index="0" role="tab" aria-selected="true" aria-label="Opinia 1"></button>
-        <button class="dot" data-index="1" role="tab" aria-selected="false" aria-label="Opinia 2"></button>
-        <button class="dot" data-index="2" role="tab" aria-selected="false" aria-label="Opinia 3"></button>
-        <button class="dot" data-index="3" role="tab" aria-selected="false" aria-label="Opinia 4"></button>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <!-- ===== CTA BANNER ===== -->
   <section class="section cta-banner">
@@ -743,9 +630,8 @@
         <div class="map-wrapper">
           <iframe title="Mapa dojazdu – Biuro Rachunkowe Emilia Motylska, Zduńska Wola"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2466.512!2d18.9392!3d51.6012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a3b3a4e2c3b3b%3A0x5c6f7e8d9a0b1c2d!2sPaderewskiego%203A%2C%2098-220%20Zdu%C5%84ska%20Wola!5e0!3m2!1spl!2spl!4v1708000000000!5m2!1spl!2spl"
-            width="100%" height="280"
-            style="border:0; border-radius:6px;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            width="100%" height="280" style="border:0; border-radius:6px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
@@ -780,8 +666,6 @@
             <option>KPiR i ryczałt</option>
             <option>Kadry i płace</option>
             <option>VAT i JPK</option>
-            <option>Doradztwo podatkowe</option>
-            <option>Zakładanie spółek</option>
           </select>
         </div>
         <div class="form-group">
@@ -791,7 +675,8 @@
         </div>
         <div class="form-group form-check">
           <input type="checkbox" id="rodo" name="rodo" required />
-          <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Biuro Rachunkowe Emilia Motylska w celu
+          <label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych przez Biuro Rachunkowe Emilia Motylska
+            w celu
             obsługi zgłoszenia. <a href="#" id="openPrivacyLink">Polityka prywatności</a>.</label>
         </div>
         <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
@@ -824,9 +709,9 @@
         </a>
         <p>Profesjonalne biuro rachunkowe. Zduńska Wola – obsługujemy klientów z całej Polski.</p>
         <div class="footer-reg">
-          <span>NIP: 000-000-00-00</span>
+          <span>NIP: 829-103-78-21</span>
           <span class="sep">·</span>
-          <span>REGON: 000000000</span>
+          <span>REGON: 100616703</span>
         </div>
       </div>
       <nav class="footer-nav" aria-label="Stopka nawigacja">
@@ -837,7 +722,6 @@
             <li><a href="#uslugi">KPiR i ryczałt</a></li>
             <li><a href="#uslugi">Kadry i płace</a></li>
             <li><a href="#uslugi">VAT i JPK</a></li>
-            <li><a href="#uslugi">Doradztwo podatkowe</a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
@@ -853,27 +737,86 @@
       </nav>
     </div>
     <div class="footer-bottom container">
-      <span>&copy; 2025 Biuro Rachunkowe Emilia Motylska. Wszelkie prawa zastrzeżone.</span>
-      <span>Projekt: <em>Antigravity Studio</em></span>
+      <span>&copy; 2026 Biuro Rachunkowe Emilia Motylska. Wszelkie prawa zastrzeżone.</span>
+      <span><a href="#" id="openCookieSettings" class="footer-cookie-link">Dostosuj cookies</a></span>
+      <span>Projekt: <em style="color:var(--gold);font-style:normal">Nonino</em></span>
     </div>
   </footer>
 
-  <!-- ===== COOKIE BANNER ===== -->
-  <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Powiadomienie o plikach cookies">
-    <div class="cookie-inner">
-      <div class="cookie-text">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"
-          flex-shrink="0" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 8v4M12 16h.01" />
+  <!-- ===== COOKIE BAR ===== -->
+  <div class="cookie-bar" id="cookieBar" role="region" aria-label="Zarządzanie plikami cookies">
+    <div class="cookie-bar-inner">
+      <div class="cookie-bar-text">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" aria-hidden="true" style="flex-shrink:0;margin-top:2px">
+          <circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" />
         </svg>
-        <p>Ta strona używa plików cookies w celu zapewnienia prawidłowego działania. Klikając &bdquo;Akceptuję&rdquo;
-          wyrażasz zgodę zgodnie z naszą <a href="#" id="cookiePrivacyLink">Polityką prywatności</a>.</p>
+        <div>
+          <strong>Ta strona używa plików cookies</strong>
+          <p>Stosujemy cookies niezbędne oraz — za Twoją zgodą — analityczne i marketingowe.
+            <a href="#" id="cookiePrivacyLink">Polityka prywatności</a></p>
+        </div>
       </div>
-      <div class="cookie-actions">
-        <button class="btn btn-ghost" id="cookieReject">Odrzuc</button>
-        <button class="btn btn-primary" id="cookieAccept">Akceptuję</button>
+      <div class="cookie-bar-actions">
+        <button class="btn btn-ghost btn-sm" id="cookieCustomize">Dostosuj</button>
+        <button class="btn btn-ghost btn-sm" id="cookieRejectAll">Tylko niezbędne</button>
+        <button class="btn btn-primary btn-sm" id="cookieAcceptAll">Akceptuj wszystkie</button>
       </div>
+    </div>
+  </div>
+
+  <!-- ===== COOKIE PREFERENCES MODAL ===== -->
+  <div class="cookie-pref-overlay" id="cookiePrefModal" role="dialog" aria-modal="true" aria-labelledby="cookiePrefTitle">
+    <div class="cookie-pref-box">
+      <button class="modal-close" id="cookiePrefClose" aria-label="Zamknij ustawienia cookies">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <span class="section-tag">Prywatność</span>
+      <h2 id="cookiePrefTitle">Ustawienia <em>cookies</em></h2>
+      <p class="cookie-pref-intro">Wybierz kategorie plików cookies, które chcesz zaakceptować. Możesz zmienić swój wybór w dowolnym momencie.</p>
+
+      <div class="cookie-cat">
+        <div class="cookie-cat-header">
+          <div class="cookie-cat-info">
+            <strong>Niezbędne</strong>
+            <p>Wymagane do prawidłowego działania strony — sesja, preferencje, bezpieczeństwo. Nie można ich wyłączyć.</p>
+          </div>
+          <span class="cookie-always-on">Zawsze aktywne</span>
+        </div>
+      </div>
+
+      <div class="cookie-cat">
+        <div class="cookie-cat-header">
+          <div class="cookie-cat-info">
+            <strong>Analityczne</strong>
+            <p>Pomagają analizować sposób korzystania ze strony (np. Google Analytics 4). Dane są anonimizowane i nie pozwalają na identyfikację użytkownika.</p>
+          </div>
+          <label class="cookie-toggle" aria-label="Zgoda na cookies analityczne">
+            <input type="checkbox" id="consentAnalytics" />
+            <span class="cookie-toggle-track"><span class="cookie-toggle-thumb"></span></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="cookie-cat">
+        <div class="cookie-cat-header">
+          <div class="cookie-cat-info">
+            <strong>Marketingowe</strong>
+            <p>Umożliwiają wyświetlanie spersonalizowanych reklam oraz śledzenie skuteczności kampanii reklamowych (Google Ads, Meta Pixel).</p>
+          </div>
+          <label class="cookie-toggle" aria-label="Zgoda na cookies marketingowe">
+            <input type="checkbox" id="consentMarketing" />
+            <span class="cookie-toggle-track"><span class="cookie-toggle-thumb"></span></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="cookie-pref-actions">
+        <button class="btn btn-primary" id="cookieSavePrefs">Zapisz preferencje</button>
+        <button class="btn btn-ghost" id="cookieAcceptAllPref">Akceptuj wszystkie</button>
+      </div>
+      <p class="cookie-pref-note">Możesz zmienić ustawienia w dowolnym momencie, klikając <a href="#" id="openCookieSettingsNote">„Dostosuj cookies"</a> w stopce strony.</p>
     </div>
   </div>
 
@@ -892,7 +835,9 @@
         <h2 id="privacyTitle">Polityka prywatności<br /><em>Biuro Rachunkowe Emilia Motylska</em></h2>
 
         <h3>1. Administrator danych</h3>
-        <p>Administratorem danych osobowych jest <strong>Emilia Motylska prowadząca działalność gospodarczą pod nazwą Biuro Rachunkowe Emilia Motylska</strong>, ul. Ignacego Jana Paderewskiego 3A, 98-220 Zduńska Wola, NIP: 000-000-00-00.</p>
+        <p>Administratorem danych osobowych jest <strong>Emilia Motylska prowadząca działalność gospodarczą pod nazwą
+            Biuro Rachunkowe Emilia Motylska</strong>, ul. Ignacego Jana Paderewskiego 3A, 98-220 Zduńska Wola, NIP:
+          829-103-78-21.</p>
 
         <h3>2. Kontakt z Administratorem</h3>
         <p>W sprawach danych osobowych: <a href="mailto:biuro.motylska@gmail.com">biuro.motylska@gmail.com</a> lub <a
@@ -908,7 +853,7 @@
         </ul>
 
         <h3>4. Pliki cookies</h3>
-        <p>Strona używa plików cookies. Wyjór kategorie:</p>
+        <p>Strona używa plików cookies. Wybrane kategorie:</p>
         <ul>
           <li><strong>Niezbędne</strong> – wymagane do działania strony; nie wymagają zgody.</li>
           <li><strong>Analityczne</strong> – analiza ruchu (np. Google Analytics); wymagają zgody.</li>
@@ -926,7 +871,72 @@
         <p>Przysługuje prawo do: dostępu, sprostowania, usunięcia, ograniczenia, przenoszenia danych i wniesienia skargi
           do UODO (ul. Stawki 2, 00-193 Warszawa).</p>
 
-        <p class="privacy-updated">Ostatnia aktualizacja: 19 lutego 2025 r.</p>
+        <p class="privacy-updated">Ostatnia aktualizacja: 16 maja 2026 r.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal RODO -->
+  <div class="modal-overlay" id="rodoModal" role="dialog" aria-modal="true" aria-labelledby="rodoTitle">
+    <div class="modal-box" role="document">
+      <button class="modal-close" id="rodoClose" aria-label="Zamknij klauzule RODO">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-content">
+        <span class="section-tag">Dokument prawny</span>
+        <h2 id="rodoTitle">Klauzula informacyjna<br /><em>RODO</em></h2>
+
+        <h3>1. Administrator danych osobowych</h3>
+        <p>Administratorem Pani/Pana danych osobowych jest <strong>Emilia Motylska prowadząca działalność gospodarczą pod nazwą Biuro Rachunkowe Emilia Motylska</strong>, ul. Ignacego Jana Paderewskiego 3A, 98-220 Zduńska Wola, NIP: 829-103-78-21, REGON: 100616703.</p>
+
+        <h3>2. Kontakt z Administratorem</h3>
+        <p>W sprawach dotyczących przetwarzania danych osobowych można kontaktować się pod adresem e-mail: <a href="mailto:biuro.motylska@gmail.com">biuro.motylska@gmail.com</a> lub telefonicznie: <a href="tel:+48786333003">+48 786 333 003</a>.</p>
+
+        <h3>3. Cele i podstawy prawne przetwarzania</h3>
+        <p>Pani/Pana dane osobowe przetwarzane są w następujących celach:</p>
+        <ul>
+          <li><strong>Zawarcia i realizacji umowy o świadczenie usług rachunkowo-księgowych</strong> – art. 6 ust. 1 lit. b RODO.</li>
+          <li><strong>Wypełnienia obowiązków prawnych</strong> (m.in. przepisy podatkowe, ustawa o rachunkowości) – art. 6 ust. 1 lit. c RODO.</li>
+          <li><strong>Obsługi zapytań i korespondencji</strong> kierowanej za pośrednictwem formularza kontaktowego – art. 6 ust. 1 lit. b lub f RODO (prawnie uzasadniony interes).</li>
+          <li><strong>Dochodzenia lub obrony roszczeń</strong> – art. 6 ust. 1 lit. f RODO.</li>
+        </ul>
+
+        <h3>4. Odbiorcy danych</h3>
+        <p>Dane mogą być przekazywane podmiotom świadczącym usługi na rzecz Administratora (np. dostawcy oprogramowania, hostingu), a także organom publicznym na podstawie obowiązujących przepisów prawa.</p>
+
+        <h3>5. Okres przechowywania danych</h3>
+        <p>Dane przechowywane są przez okres niezbędny do realizacji celu przetwarzania, a następnie:</p>
+        <ul>
+          <li>przez okres 5 lat – dokumentacja księgowa i podatkowa (licząc od końca roku obrotowego);</li>
+          <li>przez okres przedawnienia roszczeń – dane przetwarzane na podstawie prawnie uzasadnionego interesu;</li>
+          <li>do czasu wycofania zgody – jeśli przetwarzanie opiera się na zgodzie.</li>
+        </ul>
+
+        <h3>6. Prawa osoby, której dane dotyczą</h3>
+        <p>Przysługuje Pani/Panu prawo do:</p>
+        <ul>
+          <li>dostępu do treści swoich danych (art. 15 RODO);</li>
+          <li>sprostowania danych (art. 16 RODO);</li>
+          <li>usunięcia danych (art. 17 RODO);</li>
+          <li>ograniczenia przetwarzania (art. 18 RODO);</li>
+          <li>przenoszenia danych (art. 20 RODO);</li>
+          <li>wniesienia sprzeciwu wobec przetwarzania (art. 21 RODO);</li>
+          <li>wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>).</li>
+        </ul>
+
+        <h3>7. Dobrowolność podania danych</h3>
+        <p>Podanie danych osobowych jest dobrowolne, lecz niezbędne do zawarcia i realizacji umowy o świadczenie usług księgowych. Brak podania danych uniemożliwia świadczenie usług.</p>
+
+        <h3>8. Przekazywanie danych do państw trzecich</h3>
+        <p>Dane osobowe nie są przekazywane do państw trzecich poza Europejski Obszar Gospodarczy, chyba że wymagają tego przepisy prawa lub zawarta umowa.</p>
+
+        <h3>9. Zautomatyzowane podejmowanie decyzji</h3>
+        <p>Dane osobowe nie podlegają zautomatyzowanemu podejmowaniu decyzji ani profilowaniu, które wywoływałoby skutki prawne lub w podobny sposób istotnie wpływało na osobę, której dane dotyczą.</p>
+
+        <p class="privacy-updated">Ostatnia aktualizacja: 16 maja 2026 r.</p>
       </div>
     </div>
   </div>

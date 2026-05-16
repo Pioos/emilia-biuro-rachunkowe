@@ -210,37 +210,77 @@ window.addEventListener('scroll', () => {
 
 
 /* ======================================================
-   COOKIE CONSENT BANNER
+   COOKIE CONSENT – Google Consent Mode v2
    ====================================================== */
-const cookieBanner = document.getElementById('cookieBanner');
-const cookieAccept = document.getElementById('cookieAccept');
-const cookieReject = document.getElementById('cookieReject');
-const cookiePrivacy = document.getElementById('cookiePrivacyLink');
+const COOKIE_KEY = 'remtax_consent_v2';
 
-const COOKIE_KEY = 'remtax_cookie_consent';
-
-const hideCookieBanner = () => {
-  cookieBanner.classList.remove('visible');
-};
-
-const showCookieBanner = () => {
-  // Small delay so it slides in after page load
-  setTimeout(() => cookieBanner.classList.add('visible'), 900);
-};
-
-if (!localStorage.getItem(COOKIE_KEY)) {
-  showCookieBanner();
+function updateGCM(analytics, marketing) {
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', {
+      analytics_storage: analytics ? 'granted' : 'denied',
+      ad_storage: marketing ? 'granted' : 'denied',
+      ad_user_data: marketing ? 'granted' : 'denied',
+      ad_personalization: marketing ? 'granted' : 'denied',
+    });
+  }
 }
 
-cookieAccept.addEventListener('click', () => {
-  localStorage.setItem(COOKIE_KEY, 'accepted');
-  hideCookieBanner();
+// Restore on page load
+const savedConsent = JSON.parse(localStorage.getItem(COOKIE_KEY) || 'null');
+if (savedConsent) updateGCM(savedConsent.analytics, savedConsent.marketing);
+
+const cookieBar = document.getElementById('cookieBar');
+const cookiePrefModal = document.getElementById('cookiePrefModal');
+const consentAnalytics = document.getElementById('consentAnalytics');
+const consentMarketing = document.getElementById('consentMarketing');
+
+const showBar = () => setTimeout(() => cookieBar.classList.add('visible'), 900);
+const hideBar = () => cookieBar.classList.remove('visible');
+
+if (!savedConsent) showBar();
+
+function saveConsent(analytics, marketing) {
+  localStorage.setItem(COOKIE_KEY, JSON.stringify({ analytics, marketing, ts: Date.now() }));
+  updateGCM(analytics, marketing);
+  hideBar();
+  closePrefModal();
+}
+
+function openPrefModal(e) {
+  if (e) e.preventDefault();
+  const s = JSON.parse(localStorage.getItem(COOKIE_KEY) || 'null');
+  consentAnalytics.checked = s ? !!s.analytics : false;
+  consentMarketing.checked = s ? !!s.marketing : false;
+  cookiePrefModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePrefModal() {
+  cookiePrefModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('cookieAcceptAll').addEventListener('click', () => saveConsent(true, true));
+document.getElementById('cookieRejectAll').addEventListener('click', () => saveConsent(false, false));
+document.getElementById('cookieCustomize').addEventListener('click', openPrefModal);
+document.getElementById('cookiePrefClose').addEventListener('click', closePrefModal);
+document.getElementById('cookieAcceptAllPref').addEventListener('click', () => saveConsent(true, true));
+document.getElementById('cookieSavePrefs').addEventListener('click', () => {
+  saveConsent(consentAnalytics.checked, consentMarketing.checked);
 });
 
-cookieReject.addEventListener('click', () => {
-  localStorage.setItem(COOKIE_KEY, 'rejected');
-  hideCookieBanner();
+cookiePrefModal.addEventListener('click', e => { if (e.target === cookiePrefModal) closePrefModal(); });
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && cookiePrefModal.classList.contains('open')) closePrefModal();
 });
+
+['openCookieSettings', 'openCookieSettingsNote'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', e => { e.preventDefault(); openPrefModal(e); });
+});
+
+const cookiePrivacy = document.getElementById('cookiePrivacyLink');
 
 
 /* ======================================================
@@ -276,14 +316,44 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Open triggers
+// Open triggers – privacy
 const privacyTriggers = [
   document.getElementById('openPrivacyLink'),
   document.getElementById('openPrivacyFooter'),
-  document.getElementById('openRodoFooter'),
   cookiePrivacy,
 ];
 
 privacyTriggers.forEach(trigger => {
   if (trigger) trigger.addEventListener('click', openPrivacyModal);
 });
+
+// RODO modal
+const rodoModal = document.getElementById('rodoModal');
+const rodoClose = document.getElementById('rodoClose');
+
+const openRodoModal = (e) => {
+  if (e) e.preventDefault();
+  rodoModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  rodoClose.focus();
+};
+
+const closeRodoModal = () => {
+  rodoModal.classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+rodoClose.addEventListener('click', closeRodoModal);
+
+rodoModal.addEventListener('click', (e) => {
+  if (e.target === rodoModal) closeRodoModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && rodoModal.classList.contains('open')) {
+    closeRodoModal();
+  }
+});
+
+const rodoTrigger = document.getElementById('openRodoFooter');
+if (rodoTrigger) rodoTrigger.addEventListener('click', openRodoModal);
