@@ -168,6 +168,13 @@ const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 const submitText = document.getElementById('submitText');
 const successMsg = document.getElementById('formSuccess');
+const errorMsg = document.getElementById('formError');
+
+function encodeFormData(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -184,18 +191,31 @@ form.addEventListener('submit', (e) => {
   });
   if (!valid) return;
 
-  // Simulate sending
   submitBtn.disabled = true;
   submitText.textContent = 'Wysyłanie…';
+  errorMsg.hidden = true;
 
-  setTimeout(() => {
-    submitBtn.hidden = true;
-    form.querySelectorAll('input, select, textarea, button').forEach(el => {
-      if (el !== submitBtn) el.disabled = true;
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encodeFormData(data),
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      submitBtn.hidden = true;
+      form.querySelectorAll('input, select, textarea, button').forEach(el => {
+        if (el !== submitBtn) el.disabled = true;
+      });
+      successMsg.hidden = false;
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    })
+    .catch(() => {
+      submitBtn.disabled = false;
+      submitText.textContent = 'Wyślij wiadomość';
+      errorMsg.hidden = false;
     });
-    successMsg.hidden = false;
-    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 1400);
 });
 
 /* --- Hero subtle parallax --- */

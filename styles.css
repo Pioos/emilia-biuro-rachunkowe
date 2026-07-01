@@ -1358,6 +1358,33 @@ button:focus-visible {
   color: var(--text-muted);
 }
 
+.form-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: .6rem;
+  padding: 1.5rem;
+  background: rgba(224, 112, 112, .07);
+  border: 1px solid rgba(224, 112, 112, .3);
+  border-radius: 6px;
+  color: var(--text-main);
+}
+
+.form-error strong {
+  font-size: 1.1rem;
+}
+
+.form-error span {
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+
+.form-success[hidden],
+.form-error[hidden] {
+  display: none;
+}
+
 /* ======================================================
    FOOTER
    ====================================================== */
