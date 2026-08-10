@@ -1072,7 +1072,7 @@ button:focus-visible {
 }
 
 .page-lead {
-  max-width: 62ch;
+  max-width: 55ch;
   font-size: 1.08rem;
   line-height: 1.75;
   color: var(--text-muted);
@@ -1085,8 +1085,24 @@ button:focus-visible {
   gap: 1rem;
 }
 
+/* Uwaga: 1ch w DM Sans to ~11px, dużo więcej niż średnia szerokość znaku.
+   68ch dawało 86 znaków w wierszu; 55ch wypada w okolicach 70. */
 .prose {
-  max-width: 68ch;
+  max-width: 55ch;
+}
+
+.steps-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 4rem;
+  margin-bottom: -.5rem;
+}
+
+.steps-title em {
+  font-style: italic;
+  color: var(--gold);
 }
 
 .prose h2 {
@@ -1165,8 +1181,10 @@ button:focus-visible {
 }
 
 /* Dokumenty prawne: numerowane sekcje, gęstszy rytm niż w treści marketingowej */
+/* Węższa niż .prose, bo tekst klauzul ma mniejszy stopień pisma (.95rem)
+   i przy tej samej szerokości mieściłby ~82 znaki w wierszu. */
 .legal-doc {
-  max-width: 72ch;
+  max-width: 50ch;
 }
 
 .legal-doc h2 {
