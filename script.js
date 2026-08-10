@@ -1,33 +1,43 @@
 /* =============================================
-   RemTax Iwona Janiak – script.js
+   Biuro Rachunkowe Emilia Motylska – script.js
    ============================================= */
 
 'use strict';
 
+/* Skrypt jest współdzielony przez stronę główną i podstrony usługowe,
+   więc każdy element traktujemy jako opcjonalny – brak elementu nie może
+   przerwać wykonania reszty pliku. */
+const $ = (id) => document.getElementById(id);
+const on = (el, ev, fn, opts) => { if (el) el.addEventListener(ev, fn, opts); };
+
 /* --- Navbar scroll effect --- */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+const navbar = $('navbar');
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+}
 
 /* --- Mobile nav toggle --- */
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
+const navToggle = $('navToggle');
+const navLinks = $('navLinks');
 
-navToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  navToggle.classList.toggle('open', isOpen);
-  navToggle.setAttribute('aria-expanded', isOpen);
-});
-
-// Close on link click
-navLinks.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
   });
-});
+
+  // Close on link click
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
 
 /* --- Smooth active nav link highlight --- */
 const sections = document.querySelectorAll('section[id], header[id]');
@@ -60,115 +70,12 @@ document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el 
 });
 
 
-/* --- Stats counter animation --- */
-const counters = document.querySelectorAll('.stat-num[data-target]');
-let counterTriggered = false;
-
-const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-
-const animateCounter = (el, target, duration = 1800) => {
-  const start = Date.now();
-  const tick = () => {
-    const elapsed = Date.now() - start;
-    const progress = Math.min(elapsed / duration, 1);
-    el.textContent = Math.round(easeOut(progress) * target);
-    if (progress < 1) requestAnimationFrame(tick);
-    else el.textContent = target;
-  };
-  requestAnimationFrame(tick);
-};
-
-const statsObserver = new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting && !counterTriggered) {
-    counterTriggered = true;
-    counters.forEach(el => {
-      animateCounter(el, parseInt(el.dataset.target, 10));
-    });
-    statsObserver.disconnect();
-  }
-}, { threshold: 0.5 });
-
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) statsObserver.observe(heroStats);
-
-
-/* --- Testimonials slider --- */
-const track = document.getElementById('testimonialsTrack');
-const dots = document.querySelectorAll('.dot');
-let currentSlide = 0;
-let autoSlideTimer;
-let isDragging = false;
-let startX = 0;
-let scrollStartX = 0;
-
-const totalSlides = dots.length;
-
-const goToSlide = (index) => {
-  currentSlide = (index + totalSlides) % totalSlides;
-  const slideWidth = track.parentElement.offsetWidth;
-  track.style.transform = `translateX(-${currentSlide * (slideWidth + 32)}px)`;
-  dots.forEach((d, i) => {
-    d.classList.toggle('active', i === currentSlide);
-    d.setAttribute('aria-selected', i === currentSlide ? 'true' : 'false');
-  });
-};
-
-const resetAutoSlide = () => {
-  clearInterval(autoSlideTimer);
-  autoSlideTimer = setInterval(() => goToSlide(currentSlide + 1), 5500);
-};
-
-dots.forEach((dot, i) => {
-  dot.addEventListener('click', () => { goToSlide(i); resetAutoSlide(); });
-});
-
-// Drag / swipe support
-track.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.clientX;
-  scrollStartX = currentSlide;
-  track.style.transition = 'none';
-});
-window.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  const dx = e.clientX - startX;
-  const slideWidth = track.parentElement.offsetWidth;
-  track.style.transform = `translateX(${-currentSlide * (slideWidth + 32) + dx}px)`;
-});
-window.addEventListener('mouseup', (e) => {
-  if (!isDragging) return;
-  isDragging = false;
-  track.style.transition = '';
-  const dx = e.clientX - startX;
-  if (dx < -60) goToSlide(currentSlide + 1);
-  else if (dx > 60) goToSlide(currentSlide - 1);
-  else goToSlide(currentSlide);
-  resetAutoSlide();
-});
-
-// Touch support
-track.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-  track.style.transition = 'none';
-}, { passive: true });
-track.addEventListener('touchend', (e) => {
-  track.style.transition = '';
-  const dx = e.changedTouches[0].clientX - startX;
-  if (dx < -60) goToSlide(currentSlide + 1);
-  else if (dx > 60) goToSlide(currentSlide - 1);
-  else goToSlide(currentSlide);
-  resetAutoSlide();
-}, { passive: true });
-
-resetAutoSlide();
-
-
 /* --- Contact form handler --- */
-const form = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
-const submitText = document.getElementById('submitText');
-const successMsg = document.getElementById('formSuccess');
-const errorMsg = document.getElementById('formError');
+const form = $('contactForm');
+const submitBtn = $('submitBtn');
+const submitText = $('submitText');
+const successMsg = $('formSuccess');
+const errorMsg = $('formError');
 
 function encodeFormData(data) {
   return Object.keys(data)
@@ -176,20 +83,24 @@ function encodeFormData(data) {
     .join('&');
 }
 
-form.addEventListener('submit', (e) => {
+on(form, 'submit', (e) => {
   e.preventDefault();
 
-  // Basic validation
+  // Basic validation – uses native constraints (type=email itp.) mimo novalidate
   const required = form.querySelectorAll('[required]');
-  let valid = true;
+  let firstInvalid = null;
   required.forEach(field => {
-    field.style.borderColor = '';
-    if (!field.value.trim() || (field.type === 'checkbox' && !field.checked)) {
-      field.style.borderColor = '#E07070';
-      valid = false;
-    }
+    const ok = field.type === 'checkbox'
+      ? field.checked
+      : field.value.trim() !== '' && field.checkValidity();
+    field.classList.toggle('invalid', !ok);
+    field.setAttribute('aria-invalid', ok ? 'false' : 'true');
+    if (!ok && !firstInvalid) firstInvalid = field;
   });
-  if (!valid) return;
+  if (firstInvalid) {
+    firstInvalid.focus();
+    return;
+  }
 
   submitBtn.disabled = true;
   submitText.textContent = 'Wysyłanie…';
@@ -220,19 +131,38 @@ form.addEventListener('submit', (e) => {
 
 /* --- Hero subtle parallax --- */
 const heroBg = document.querySelector('.hero-bg-pattern');
-window.addEventListener('scroll', () => {
-  if (!heroBg) return;
-  const scrolled = window.scrollY;
-  if (scrolled < window.innerHeight) {
-    heroBg.style.transform = `translateY(${scrolled * 0.25}px)`;
-  }
-}, { passive: true });
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (heroBg) {
+  let parallaxQueued = false;
+  window.addEventListener('scroll', () => {
+    if (parallaxQueued || reduceMotion.matches) return;
+    parallaxQueued = true;
+    requestAnimationFrame(() => {
+      parallaxQueued = false;
+      const scrolled = window.scrollY;
+      if (scrolled < window.innerHeight) {
+        heroBg.style.transform = `translateY(${scrolled * 0.25}px)`;
+      }
+    });
+  }, { passive: true });
+}
 
 
 /* ======================================================
    COOKIE CONSENT – Google Consent Mode v2
    ====================================================== */
-const COOKIE_KEY = 'remtax_consent_v2';
+const COOKIE_KEY = 'motylska_consent_v2';
+
+/** Bezpieczny odczyt zgody – uszkodzony wpis w localStorage nie może wywrócić skryptu. */
+function readConsent() {
+  try {
+    return JSON.parse(localStorage.getItem(COOKIE_KEY) || 'null');
+  } catch {
+    localStorage.removeItem(COOKIE_KEY);
+    return null;
+  }
+}
 
 function updateGCM(analytics, marketing) {
   if (typeof gtag === 'function') {
@@ -246,16 +176,16 @@ function updateGCM(analytics, marketing) {
 }
 
 // Restore on page load
-const savedConsent = JSON.parse(localStorage.getItem(COOKIE_KEY) || 'null');
+const savedConsent = readConsent();
 if (savedConsent) updateGCM(savedConsent.analytics, savedConsent.marketing);
 
-const cookieBar = document.getElementById('cookieBar');
-const cookiePrefModal = document.getElementById('cookiePrefModal');
-const consentAnalytics = document.getElementById('consentAnalytics');
-const consentMarketing = document.getElementById('consentMarketing');
+const cookieBar = $('cookieBar');
+const cookiePrefModal = $('cookiePrefModal');
+const consentAnalytics = $('consentAnalytics');
+const consentMarketing = $('consentMarketing');
 
-const showBar = () => setTimeout(() => cookieBar.classList.add('visible'), 900);
-const hideBar = () => cookieBar.classList.remove('visible');
+const showBar = () => { if (cookieBar) setTimeout(() => cookieBar.classList.add('visible'), 900); };
+const hideBar = () => { if (cookieBar) cookieBar.classList.remove('visible'); };
 
 if (!savedConsent) showBar();
 
@@ -266,114 +196,137 @@ function saveConsent(analytics, marketing) {
   closePrefModal();
 }
 
+/* ======================================================
+   MODALE – wspólna obsługa (fokus, Escape, kliknięcie w tło)
+   ====================================================== */
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select, textarea, [tabindex]:not([tabindex="-1"])';
+let openModal = null;
+let lastFocused = null;
+
+function showModal(modal, initialFocus) {
+  if (!modal) return;
+  lastFocused = document.activeElement;
+  modal.classList.add('open');
+  modal.removeAttribute('aria-hidden');
+  document.body.style.overflow = 'hidden';
+  openModal = modal;
+  // Overlay ma visibility: hidden z transition – focus() zadziała dopiero po
+  // przeliczeniu stylów. setTimeout, nie rAF: rAF nie odpala się w nieaktywnej karcie.
+  setTimeout(() => {
+    (initialFocus || modal.querySelector(FOCUSABLE))?.focus();
+  }, 0);
+}
+
+function hideModal(modal) {
+  if (!modal) return;
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (openModal === modal) openModal = null;
+  // Fokus wraca tam, skąd modal otwarto – wymóg WCAG 2.4.3
+  if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+}
+
+// Jeden globalny listener zamiast trzech: Escape zamyka, Tab krąży wewnątrz modala
+document.addEventListener('keydown', (e) => {
+  if (!openModal) return;
+  if (e.key === 'Escape') {
+    hideModal(openModal);
+    return;
+  }
+  if (e.key !== 'Tab') return;
+  const items = [...openModal.querySelectorAll(FOCUSABLE)].filter(el => el.offsetParent !== null);
+  if (!items.length) return;
+  const first = items[0];
+  const last = items[items.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
+});
+
+/** Podpina zamykanie kliknięciem w tło modala. */
+function bindBackdrop(modal) {
+  on(modal, 'click', (e) => { if (e.target === modal) hideModal(modal); });
+}
+
+/* --- Modal preferencji cookies --- */
 function openPrefModal(e) {
   if (e) e.preventDefault();
-  const s = JSON.parse(localStorage.getItem(COOKIE_KEY) || 'null');
-  consentAnalytics.checked = s ? !!s.analytics : false;
-  consentMarketing.checked = s ? !!s.marketing : false;
-  cookiePrefModal.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  if (!cookiePrefModal) return;
+  const s = readConsent();
+  if (consentAnalytics) consentAnalytics.checked = s ? !!s.analytics : false;
+  if (consentMarketing) consentMarketing.checked = s ? !!s.marketing : false;
+  showModal(cookiePrefModal, $('cookiePrefClose'));
 }
 
 function closePrefModal() {
-  cookiePrefModal.classList.remove('open');
-  document.body.style.overflow = '';
+  hideModal(cookiePrefModal);
 }
 
-document.getElementById('cookieAcceptAll').addEventListener('click', () => saveConsent(true, true));
-document.getElementById('cookieRejectAll').addEventListener('click', () => saveConsent(false, false));
-document.getElementById('cookieCustomize').addEventListener('click', openPrefModal);
-document.getElementById('cookiePrefClose').addEventListener('click', closePrefModal);
-document.getElementById('cookieAcceptAllPref').addEventListener('click', () => saveConsent(true, true));
-document.getElementById('cookieSavePrefs').addEventListener('click', () => {
-  saveConsent(consentAnalytics.checked, consentMarketing.checked);
+on($('cookieAcceptAll'), 'click', () => saveConsent(true, true));
+on($('cookieRejectAll'), 'click', () => saveConsent(false, false));
+on($('cookieCustomize'), 'click', openPrefModal);
+on($('cookiePrefClose'), 'click', closePrefModal);
+on($('cookieAcceptAllPref'), 'click', () => saveConsent(true, true));
+on($('cookieSavePrefs'), 'click', () => {
+  saveConsent(!!consentAnalytics?.checked, !!consentMarketing?.checked);
 });
-
-cookiePrefModal.addEventListener('click', e => { if (e.target === cookiePrefModal) closePrefModal(); });
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && cookiePrefModal.classList.contains('open')) closePrefModal();
-});
+bindBackdrop(cookiePrefModal);
 
 ['openCookieSettings', 'openCookieSettingsNote'].forEach(id => {
-  const el = document.getElementById(id);
-  if (el) el.addEventListener('click', e => { e.preventDefault(); openPrefModal(e); });
+  on($(id), 'click', e => { e.preventDefault(); openPrefModal(e); });
 });
 
-const cookiePrivacy = document.getElementById('cookiePrivacyLink');
 
-
-/* ======================================================
-   PRIVACY POLICY MODAL
-   ====================================================== */
-const privacyModal = document.getElementById('privacyModal');
-const privacyClose = document.getElementById('privacyClose');
+/* --- Modal polityki prywatności --- */
+const privacyModal = $('privacyModal');
+const privacyClose = $('privacyClose');
 
 const openPrivacyModal = (e) => {
   if (e) e.preventDefault();
-  privacyModal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  privacyClose.focus();
+  showModal(privacyModal, privacyClose);
 };
 
-const closePrivacyModal = () => {
-  privacyModal.classList.remove('open');
-  document.body.style.overflow = '';
-};
+on(privacyClose, 'click', () => hideModal(privacyModal));
+bindBackdrop(privacyModal);
 
-// Close on button click
-privacyClose.addEventListener('click', closePrivacyModal);
-
-// Close on backdrop click
-privacyModal.addEventListener('click', (e) => {
-  if (e.target === privacyModal) closePrivacyModal();
+['openPrivacyLink', 'openPrivacyFooter', 'cookiePrivacyLink'].forEach(id => {
+  on($(id), 'click', openPrivacyModal);
 });
 
-// Close on Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && privacyModal.classList.contains('open')) {
-    closePrivacyModal();
-  }
-});
 
-// Open triggers – privacy
-const privacyTriggers = [
-  document.getElementById('openPrivacyLink'),
-  document.getElementById('openPrivacyFooter'),
-  cookiePrivacy,
-];
-
-privacyTriggers.forEach(trigger => {
-  if (trigger) trigger.addEventListener('click', openPrivacyModal);
-});
-
-// RODO modal
-const rodoModal = document.getElementById('rodoModal');
-const rodoClose = document.getElementById('rodoClose');
+/* --- Modal RODO --- */
+const rodoModal = $('rodoModal');
+const rodoClose = $('rodoClose');
 
 const openRodoModal = (e) => {
   if (e) e.preventDefault();
-  rodoModal.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  rodoClose.focus();
+  showModal(rodoModal, rodoClose);
 };
 
-const closeRodoModal = () => {
-  rodoModal.classList.remove('open');
-  document.body.style.overflow = '';
-};
+on(rodoClose, 'click', () => hideModal(rodoModal));
+bindBackdrop(rodoModal);
 
-rodoClose.addEventListener('click', closeRodoModal);
+on($('openRodoFooter'), 'click', openRodoModal);
 
-rodoModal.addEventListener('click', (e) => {
-  if (e.target === rodoModal) closeRodoModal();
+
+/* --- Rok w stopce --- */
+const footerYear = $('footerYear');
+if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+
+/* --- FAQ – akordeon --- */
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+  if (!btn || !answer) return;
+  btn.addEventListener('click', () => {
+    const open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    answer.hidden = !open;
+  });
 });
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && rodoModal.classList.contains('open')) {
-    closeRodoModal();
-  }
-});
-
-const rodoTrigger = document.getElementById('openRodoFooter');
-if (rodoTrigger) rodoTrigger.addEventListener('click', openRodoModal);

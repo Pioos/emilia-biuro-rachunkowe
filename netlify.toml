@@ -1,8 +1,93 @@
 [build]
   publish = "."
 
+# Czyste adresy: /pelna-ksiegowosc zamiast /pelna-ksiegowosc.html.
+# Jawne 301 pilnują, żeby obie wersje nie trafiły do indeksu Google.
+[[redirects]]
+  from = "/pelna-ksiegowosc.html"
+  to = "/pelna-ksiegowosc"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kpir-ryczalt.html"
+  to = "/kpir-ryczalt"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kadry-i-place.html"
+  to = "/kadry-i-place"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vat-jpk.html"
+  to = "/vat-jpk"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/polityka-prywatnosci.html"
+  to = "/polityka-prywatnosci"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rodo.html"
+  to = "/rodo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Cross-Origin-Opener-Policy = "same-origin"
+
+# Zasoby statyczne – cache na rok (pliki wersjonuj zmianą nazwy przy podmianie)
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# HTML/CSS/JS – zawsze rewalidacja, żeby poprawki trafiały do użytkowników od razu
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
