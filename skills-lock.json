@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "seo-fixer": {
+      "source": "bartoszgolebiowski/katarzyna-golebiowska-kancelaria",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/seo-fixer/SKILL.md",
+      "computedHash": "13006d8d6a9e572118842eb14b66d9cfe37073da65b9ffd88a39870f7484fe0c"
+    }
+  }
+}
