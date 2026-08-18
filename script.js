@@ -4,6 +4,9 @@
 
 'use strict';
 
+/** Identyfikator pomiaru GA4 (G-XXXXXXXXXX). Puste = analityka wyłączona. */
+const GA4_ID = '';
+
 /* Skrypt jest współdzielony przez stronę główną i podstrony usługowe,
    więc każdy element traktujemy jako opcjonalny – brak elementu nie może
    przerwać wykonania reszty pliku. */
@@ -121,6 +124,7 @@ on(form, 'submit', (e) => {
       });
       successMsg.hidden = false;
       successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (typeof gtag === 'function' && GA4_ID) gtag('event', 'formularz_wyslany');
     })
     .catch(() => {
       submitBtn.disabled = false;
@@ -195,6 +199,34 @@ function saveConsent(analytics, marketing) {
   hideBar();
   closePrefModal();
 }
+
+/* ======================================================
+   GOOGLE ANALYTICS 4
+   ------------------------------------------------------
+   Wystarczy wkleić identyfikator pomiaru poniżej (G-XXXXXXXXXX).
+   Dopóki stała jest pusta, nic się nie ładuje – zero żądań,
+   zero cookies. Zgodą sterują ustawienia Consent Mode v2
+   zadeklarowane w <head>, więc do momentu akceptacji GA4
+   działa w trybie bezcookiesowym.
+   ====================================================== */
+if (GA4_ID) {
+  const tag = document.createElement('script');
+  tag.async = true;
+  tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+  document.head.appendChild(tag);
+
+  gtag('js', new Date());
+  gtag('config', GA4_ID, { anonymize_ip: true });
+
+  // Zdarzenia konwersji: telefon, e-mail i wysłanie formularza
+  document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+    a.addEventListener('click', () => gtag('event', 'klik_telefon', { miejsce: location.pathname }));
+  });
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+    a.addEventListener('click', () => gtag('event', 'klik_email', { miejsce: location.pathname }));
+  });
+}
+
 
 /* ======================================================
    MODALE – wspólna obsługa (fokus, Escape, kliknięcie w tło)
