@@ -5,7 +5,7 @@
 'use strict';
 
 /** Identyfikator pomiaru GA4 (G-XXXXXXXXXX). Puste = analityka wyłączona. */
-const GA4_ID = '';
+const GA4_ID = 'G-B2QHW3XTSM';
 
 /* Skrypt jest współdzielony przez stronę główną i podstrony usługowe,
    więc każdy element traktujemy jako opcjonalny – brak elementu nie może
