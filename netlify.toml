@@ -28,6 +28,18 @@
   force = true
 
 [[redirects]]
+  from = "/ksef.html"
+  to = "/ksef"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ksiegowosc-spolki-zoo.html"
+  to = "/ksiegowosc-spolki-zoo"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/polityka-prywatnosci.html"
   to = "/polityka-prywatnosci"
   status = 301
