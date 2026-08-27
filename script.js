@@ -93,11 +93,22 @@ on(form, 'submit', (e) => {
   const required = form.querySelectorAll('[required]');
   let firstInvalid = null;
   required.forEach(field => {
-    const ok = field.type === 'checkbox'
-      ? field.checked
-      : field.value.trim() !== '' && field.checkValidity();
+    const puste = field.type === 'checkbox' ? !field.checked : field.value.trim() === '';
+    const ok = field.type === 'checkbox' ? field.checked
+      : !puste && field.checkValidity();
     field.classList.toggle('invalid', !ok);
     field.setAttribute('aria-invalid', ok ? 'false' : 'true');
+
+    // Komunikat przy polu – sam kolor obramowania nie wystarcza (WCAG 1.4.1),
+    // a aria-describedby wiąże treść błędu z polem dla czytników ekranu.
+    const komunikat = document.getElementById(field.id + '-err');
+    if (komunikat) {
+      komunikat.textContent = ok ? ''
+        : field.type === 'checkbox' ? 'Zgoda jest wymagana, żeby wysłać wiadomość.'
+        : puste ? 'To pole jest wymagane.'
+        : 'Podaj poprawny adres e-mail.';
+      komunikat.classList.toggle('visible', !ok);
+    }
     if (!ok && !firstInvalid) firstInvalid = field;
   });
   if (firstInvalid) {
