@@ -3,6 +3,33 @@
    Navy (#0B1E3D) + Gold (#C9A84C) palette
    ============================================= */
 
+/* Fonty hostowane lokalnie. Wcześniej arkusz z fonts.googleapis.com blokował
+   render i siedział w środku ścieżki krytycznej (681 ms na obcym origin).
+   To warianty zmienne, przycięte do znaków występujących na stronie. */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/fonts/cormorant-garamond.woff2') format('woff2');
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/fonts/cormorant-garamond-italic.woff2') format('woff2');
+  font-weight: 500 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/dm-sans.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ---- CSS Variables ---- */
 :root {
   --navy: #0B1E3D;
