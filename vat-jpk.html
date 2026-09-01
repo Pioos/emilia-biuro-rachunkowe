@@ -144,7 +144,7 @@
           "name": "Czy opłaca się rejestrować do VAT dobrowolnie?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jeśli sprzedajesz głównie firmom będącym czynnymi podatnikami VAT, rejestracja zwykle się opłaca — odzyskujesz podatek od zakupów, a Twoi kontrahenci i tak odliczają VAT z Twoich faktur. Przy sprzedaży osobom prywatnym zwolnienie jest najczęściej korzystniejsze. Kalkulację robimy na Twojej strukturze sprzedaży i planowanych zakupach."
+            "text": "To zależy od tego, komu sprzedajesz. Jeśli głównie firmom będącym czynnymi podatnikami VAT, rejestracja zwykle się opłaca — odzyskujesz podatek od zakupów, a Twoi kontrahenci i tak odliczają VAT z Twoich faktur. Przy sprzedaży osobom prywatnym zwolnienie jest najczęściej korzystniejsze. Kalkulację robimy na Twojej strukturze sprzedaży i planowanych zakupach."
           }
         },
         {
@@ -152,7 +152,7 @@
           "name": "Co zrobić, gdy urząd zgłosi rozbieżność w JPK?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Wezwania z tytułu rozbieżności to sytuacja rutynowa — najczęściej wynikają z tego, że kontrahent ujął fakturę w innym okresie lub z literówki w numerze dokumentu. Przygotowujemy wyjaśnienie, w razie potrzeby korektę pliku i prowadzimy korespondencję z urzędem. Nie musisz angażować się w to samodzielnie."
+            "text": "Przekaż wezwanie nam — resztą zajmujemy się my. Rozbieżności to sytuacja rutynowa i najczęściej wynikają z tego, że kontrahent ujął fakturę w innym okresie lub z literówki w numerze dokumentu. Przygotowujemy wyjaśnienie, w razie potrzeby korektę pliku i prowadzimy korespondencję z urzędem. Nie musisz angażować się w to samodzielnie."
           }
         },
         {
@@ -255,6 +255,53 @@
           <li><strong>Weryfikacja kontrahentów</strong> — sprawdzanie statusu w wykazie podatników VAT (biała lista) i rachunków bankowych.</li>
           <li><strong>Reprezentacja przed Urzędem Skarbowym</strong> — odpowiedzi na wezwania, wyjaśnienia rozbieżności, wsparcie w czynnościach sprawdzających.</li>
         </ul>
+        <h2>JPK_V7M a JPK_V7K — <em>czym się różnią</em></h2>
+        <p>Oba pliki zawierają tę samą ewidencję, a różnica dotyczy tego, jak często składa się część deklaracyjną. Wybór zależy od statusu podatnika i przewidywalności rozliczeń.</p>
+        <div class="table-wrap">
+          <table class="compare">
+            <caption>JPK_V7M a JPK_V7K — porównanie</caption>
+            <thead>
+              <tr>
+                <th scope="col">Kryterium</th>
+                <th scope="col">JPK_V7M</th>
+                <th scope="col">JPK_V7K</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Rozliczenie VAT</th>
+                <td>Miesięczne</td>
+                <td>Kwartalne</td>
+              </tr>
+              <tr>
+                <th scope="row">Część ewidencyjna</th>
+                <td>Co miesiąc</td>
+                <td>Co miesiąc</td>
+              </tr>
+              <tr>
+                <th scope="row">Część deklaracyjna</th>
+                <td>Co miesiąc</td>
+                <td>Raz na kwartał</td>
+              </tr>
+              <tr>
+                <th scope="row">Liczba wysyłek w kwartale</th>
+                <td>3</td>
+                <td>3 (w tym 1 z deklaracją)</td>
+              </tr>
+              <tr>
+                <th scope="row">Zwrot VAT</th>
+                <td>Szybszy — rozliczany co miesiąc</td>
+                <td>Wolniejszy — po zamknięciu kwartału</td>
+              </tr>
+              <tr>
+                <th scope="row">Dla kogo</th>
+                <td>Podatnicy z nadwyżką podatku naliczonego i częstymi zwrotami</td>
+                <td>Mali podatnicy o stabilnych, przewidywalnych rozliczeniach</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <h2>Zwolnienie z VAT — <em>czy na pewno się opłaca</em></h2>
         <p>Wielu przedsiębiorców rozpoczynających działalność automatycznie korzysta ze zwolnienia podmiotowego z VAT, zakładając, że jest ono zawsze korzystniejsze. To nie zawsze prawda.</p>
         <p>Jeśli sprzedajesz głównie firmom będącym czynnymi podatnikami VAT, zwolnienie nie daje Ci przewagi cenowej — Twój kontrahent i tak odliczyłby podatek. Tracisz za to prawo do odliczenia VAT od własnych zakupów, co przy większych inwestycjach w sprzęt, samochód czy towary oznacza realną stratę. Odwrotnie: przy sprzedaży osobom prywatnym zwolnienie zwykle jest korzystne.</p>
@@ -309,7 +356,7 @@
             </button>
           </h3>
           <div class="faq-answer" inert>
-            <p>Jeśli sprzedajesz głównie firmom będącym czynnymi podatnikami VAT, rejestracja zwykle się opłaca — odzyskujesz podatek od zakupów, a Twoi kontrahenci i tak odliczają VAT z Twoich faktur. Przy sprzedaży osobom prywatnym zwolnienie jest najczęściej korzystniejsze. Kalkulację robimy na Twojej strukturze sprzedaży i planowanych zakupach.</p>
+            <p>To zależy od tego, komu sprzedajesz. Jeśli głównie firmom będącym czynnymi podatnikami VAT, rejestracja zwykle się opłaca — odzyskujesz podatek od zakupów, a Twoi kontrahenci i tak odliczają VAT z Twoich faktur. Przy sprzedaży osobom prywatnym zwolnienie jest najczęściej korzystniejsze. Kalkulację robimy na Twojej strukturze sprzedaży i planowanych zakupach.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -323,7 +370,7 @@
             </button>
           </h3>
           <div class="faq-answer" inert>
-            <p>Wezwania z tytułu rozbieżności to sytuacja rutynowa — najczęściej wynikają z tego, że kontrahent ujął fakturę w innym okresie lub z literówki w numerze dokumentu. Przygotowujemy wyjaśnienie, w razie potrzeby korektę pliku i prowadzimy korespondencję z urzędem. Nie musisz angażować się w to samodzielnie.</p>
+            <p>Przekaż wezwanie nam — resztą zajmujemy się my. Rozbieżności to sytuacja rutynowa i najczęściej wynikają z tego, że kontrahent ujął fakturę w innym okresie lub z literówki w numerze dokumentu. Przygotowujemy wyjaśnienie, w razie potrzeby korektę pliku i prowadzimy korespondencję z urzędem. Nie musisz angażować się w to samodzielnie.</p>
           </div>
         </div>
         <div class="faq-item">

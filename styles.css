@@ -1065,6 +1065,63 @@ button:focus-visible {
   line-height: 1.6;
 }
 
+/* Tabele porównawcze. Szerokie treści muszą przewijać się we własnym
+   kontenerze — strona nigdy nie przewija się poziomo. */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.8rem 0;
+  border: 1px solid rgba(201, 168, 76, .18);
+  border-radius: 6px;
+}
+
+.compare {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+  min-width: 32rem;
+}
+
+.compare caption {
+  padding: .9rem 1.1rem;
+  text-align: left;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(201, 168, 76, .18);
+}
+
+.compare th,
+.compare td {
+  padding: .8rem 1.1rem;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+.compare thead th {
+  font-weight: 600;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, .04);
+}
+
+.compare tbody th {
+  font-weight: 500;
+  color: var(--text-main);
+  width: 30%;
+}
+
+.compare tbody td {
+  color: var(--text-muted);
+}
+
+.compare tbody tr:last-child th,
+.compare tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 /* ======================================================
    PODSTRONY USŁUGOWE
    ====================================================== */
