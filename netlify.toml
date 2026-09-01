@@ -111,3 +111,10 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     Access-Control-Allow-Origin = "*"
+
+# Dokumentacja audytowa nie jest częścią serwisu. robots.txt blokuje crawl,
+# a ten nagłówek wyklucza z indeksu również to, co zostało już pobrane.
+[[headers]]
+  for = "/docs/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

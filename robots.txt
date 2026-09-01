@@ -1,6 +1,9 @@
 # Wszystkie boty mają pełny dostęp.
 User-agent: *
 Allow: /
+# Dokumentacja wewnętrzna – Netlify publikuje cały katalog repozytorium,
+# więc pliki z docs/ są osiągalne, ale nie mają trafiać do wyników.
+Disallow: /docs/
 
 # Poniższe wpisy nie zmieniają uprawnień – są jawną deklaracją, że treść
 # może być wykorzystywana przez wyszukiwarki i asystentów opartych na AI.
