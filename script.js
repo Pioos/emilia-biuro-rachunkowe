@@ -367,9 +367,13 @@ document.querySelectorAll('.faq-item').forEach(item => {
   const btn = item.querySelector('.faq-question');
   const answer = item.querySelector('.faq-answer');
   if (!btn || !answer) return;
+  // inert zamiast hidden: treść zostaje wyrenderowana (tylko przycięta
+  // wysokością), ale zwinięta odpowiedź jest wyjęta z kolejności Tab
+  // i z drzewa dostępności.
+  answer.inert = !item.classList.contains('open');
   btn.addEventListener('click', () => {
     const open = item.classList.toggle('open');
     btn.setAttribute('aria-expanded', open);
-    answer.hidden = !open;
+    answer.inert = !open;
   });
 });

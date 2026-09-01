@@ -1481,8 +1481,26 @@ button:focus-visible {
   transform: rotate(180deg);
 }
 
+/* Zwijamy wysokością, nie atrybutem hidden. hidden działa jak display: none,
+   więc treść nie trafia do drzewa renderowania – a to najlepszy materiał do
+   cytowania przez wyszukiwarki i asystentów AI. Za odcięcie od klawiatury
+   i czytników ekranu odpowiada teraz atrybut inert, przełączany w JS. */
 .faq-answer {
-  padding: 0 1.6rem 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.6rem;
+  transition: max-height .35s var(--ease-out), padding-bottom .35s var(--ease-out);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 45rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-answer {
+    transition: none;
+  }
 }
 
 .faq-answer p {
