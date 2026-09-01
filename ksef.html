@@ -45,58 +45,116 @@
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://biuro-motylska.pl/ksef#service",
-        "name": "Obsługa KSeF w Zduńskiej Woli",
-        "serviceType": "Wsparcie księgowe w Krajowym Systemie e-Faktur",
-        "description": "Przygotowanie firmy do pracy z KSeF, uporządkowanie uprawnień i obiegu e-faktur oraz bieżąca obsługa księgowa.",
-        "url": "https://biuro-motylska.pl/ksef",
-        "provider": { "@id": "https://biuro-motylska.pl/#biuro" },
-        "areaServed": [
-          { "@type": "City", "name": "Zduńska Wola" },
-          { "@type": "AdministrativeArea", "name": "powiat zduńskowolski" },
-          { "@type": "Country", "name": "Polska" }
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://biuro-motylska.pl/ksef#service",
+      "name": "Obsługa KSeF w Zduńskiej Woli",
+      "serviceType": "Wsparcie księgowe w Krajowym Systemie e-Faktur",
+      "description": "Przygotowanie firmy do pracy z KSeF, uporządkowanie uprawnień i obiegu e-faktur oraz bieżąca obsługa księgowa.",
+      "url": "https://biuro-motylska.pl/ksef",
+      "provider": {
+        "@id": "https://biuro-motylska.pl/#biuro"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://biuro-motylska.pl/" },
-          { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://biuro-motylska.pl/#uslugi" },
-          { "@type": "ListItem", "position": 3, "name": "Obsługa KSeF", "item": "https://biuro-motylska.pl/ksef" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://biuro-motylska.pl/ksef#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Czy biuro rachunkowe może otrzymać dostęp do KSeF firmy?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Tak. Podatnik może nadać odpowiednie uprawnienia osobie lub podmiotowi obsługującemu księgowość. Zakres uprawnień powinien odpowiadać ustalonemu obiegowi faktur i odpowiedzialności stron." }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy wszystkie firmy muszą odbierać faktury w KSeF?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Zgodnie z informacjami Ministerstwa Finansów otrzymywanie faktur przy użyciu KSeF jest obowiązkowe od 1 lutego 2026 roku, z uwzględnieniem przypadków wyłączonych ustawowo." }
-          },
-          {
-            "@type": "Question",
-            "name": "Jak przygotować firmę do obsługi KSeF?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Należy ustalić osoby odpowiedzialne, nadać właściwe uprawnienia, wybrać narzędzie do wystawiania i odbierania faktur oraz opisać sposób weryfikacji, akceptacji i przekazywania dokumentów do księgowości." }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy KSeF zastępuje księgowość i rozliczenia VAT?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Nie. KSeF służy do wystawiania i odbierania faktur ustrukturyzowanych, ale dokumenty nadal wymagają prawidłowej kwalifikacji, ujęcia w ewidencji VAT i księgach oraz rozliczenia podatkowego." }
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Zduńska Wola"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "powiat zduńskowolski"
+        },
+        {
+          "@type": "Country",
+          "name": "Polska"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://biuro-motylska.pl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Usługi",
+          "item": "https://biuro-motylska.pl/#uslugi"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Obsługa KSeF",
+          "item": "https://biuro-motylska.pl/ksef"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://biuro-motylska.pl/ksef#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czy biuro rachunkowe może otrzymać dostęp do KSeF firmy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Podatnik może nadać odpowiednie uprawnienia osobie lub podmiotowi obsługującemu księgowość. Zakres uprawnień powinien odpowiadać ustalonemu obiegowi faktur i odpowiedzialności stron."
           }
-        ]
+        },
+        {
+          "@type": "Question",
+          "name": "Czy wszystkie firmy muszą odbierać faktury w KSeF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zgodnie z informacjami Ministerstwa Finansów otrzymywanie faktur przy użyciu KSeF jest obowiązkowe od 1 lutego 2026 roku, z uwzględnieniem przypadków wyłączonych ustawowo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak przygotować firmę do obsługi KSeF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Należy ustalić osoby odpowiedzialne, nadać właściwe uprawnienia, wybrać narzędzie do wystawiania i odbierania faktur oraz opisać sposób weryfikacji, akceptacji i przekazywania dokumentów do księgowości."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy KSeF zastępuje księgowość i rozliczenia VAT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. KSeF służy do wystawiania i odbierania faktur ustrukturyzowanych, ale dokumenty nadal wymagają prawidłowej kwalifikacji, ujęcia w ewidencji VAT i księgach oraz rozliczenia podatkowego."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://biuro-motylska.pl/ksef#strona",
+      "url": "https://biuro-motylska.pl/ksef",
+      "name": "Obsługa KSeF Zduńska Wola | Biuro Rachunkowe Motylska",
+      "dateModified": "2026-09-01",
+      "inLanguage": "pl-PL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://biuro-motylska.pl/#serwis",
+        "url": "https://biuro-motylska.pl/",
+        "name": "Biuro Rachunkowe Emilia Motylska"
+      },
+      "about": {
+        "@id": "https://biuro-motylska.pl/#biuro"
+      },
+      "publisher": {
+        "@id": "https://biuro-motylska.pl/#biuro"
       }
-    ]
-  }
+    }
+  ]
+}
   </script>
 
   <link rel="preload" href="/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin />

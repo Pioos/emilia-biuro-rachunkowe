@@ -45,58 +45,116 @@
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "@id": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo#service",
-        "name": "Księgowość spółki z o.o. w Zduńskiej Woli",
-        "serviceType": "Prowadzenie ksiąg rachunkowych spółki z ograniczoną odpowiedzialnością",
-        "description": "Obsługa księgowa spółek z o.o.: księgi handlowe, CIT-8, VAT, sprawozdania finansowe do KRS oraz rozliczenia zarządu i pracowników.",
-        "url": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo",
-        "provider": { "@id": "https://biuro-motylska.pl/#biuro" },
-        "areaServed": [
-          { "@type": "City", "name": "Zduńska Wola" },
-          { "@type": "AdministrativeArea", "name": "powiat zduńskowolski" },
-          { "@type": "Country", "name": "Polska" }
-        ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo#service",
+      "name": "Księgowość spółki z o.o. w Zduńskiej Woli",
+      "serviceType": "Prowadzenie ksiąg rachunkowych spółki z ograniczoną odpowiedzialnością",
+      "description": "Obsługa księgowa spółek z o.o.: księgi handlowe, CIT-8, VAT, sprawozdania finansowe do KRS oraz rozliczenia zarządu i pracowników.",
+      "url": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo",
+      "provider": {
+        "@id": "https://biuro-motylska.pl/#biuro"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://biuro-motylska.pl/" },
-          { "@type": "ListItem", "position": 2, "name": "Usługi", "item": "https://biuro-motylska.pl/#uslugi" },
-          { "@type": "ListItem", "position": 3, "name": "Księgowość spółki z o.o.", "item": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Czy spółka z o.o. zawsze prowadzi pełną księgowość?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Tak. Spółka z ograniczoną odpowiedzialnością prowadzi księgi rachunkowe od początku działalności, niezależnie od wysokości przychodów i liczby wystawianych faktur." }
-          },
-          {
-            "@type": "Question",
-            "name": "Co obejmuje księgowość spółki z o.o.?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Zakres obejmuje między innymi prowadzenie ksiąg handlowych, rozliczenia CIT i VAT, ewidencję środków trwałych, zamknięcie roku, sporządzenie sprawozdania finansowego oraz wsparcie w rozliczeniach zarządu i pracowników." }
-          },
-          {
-            "@type": "Question",
-            "name": "Czy biuro przygotowuje sprawozdanie finansowe do KRS?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Tak. Przygotowujemy bilans, rachunek zysków i strat, informację dodatkową i pozostałe wymagane elementy sprawozdania oraz wspieramy w przygotowaniu dokumentów do zatwierdzenia i złożenia." }
-          },
-          {
-            "@type": "Question",
-            "name": "Ile kosztuje księgowość spółki z o.o.?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Cena zależy od liczby dokumentów i rachunków bankowych, statusu VAT, transakcji zagranicznych, liczby pracowników i zakresu raportowania. Po konsultacji przedstawiamy indywidualną miesięczną wycenę." }
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Zduńska Wola"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "powiat zduńskowolski"
+        },
+        {
+          "@type": "Country",
+          "name": "Polska"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://biuro-motylska.pl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Usługi",
+          "item": "https://biuro-motylska.pl/#uslugi"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Księgowość spółki z o.o.",
+          "item": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czy spółka z o.o. zawsze prowadzi pełną księgowość?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Spółka z ograniczoną odpowiedzialnością prowadzi księgi rachunkowe od początku działalności, niezależnie od wysokości przychodów i liczby wystawianych faktur."
           }
-        ]
+        },
+        {
+          "@type": "Question",
+          "name": "Co obejmuje księgowość spółki z o.o.?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zakres obejmuje między innymi prowadzenie ksiąg handlowych, rozliczenia CIT i VAT, ewidencję środków trwałych, zamknięcie roku, sporządzenie sprawozdania finansowego oraz wsparcie w rozliczeniach zarządu i pracowników."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy biuro przygotowuje sprawozdanie finansowe do KRS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Przygotowujemy bilans, rachunek zysków i strat, informację dodatkową i pozostałe wymagane elementy sprawozdania oraz wspieramy w przygotowaniu dokumentów do zatwierdzenia i złożenia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ile kosztuje księgowość spółki z o.o.?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cena zależy od liczby dokumentów i rachunków bankowych, statusu VAT, transakcji zagranicznych, liczby pracowników i zakresu raportowania. Po konsultacji przedstawiamy indywidualną miesięczną wycenę."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo#strona",
+      "url": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo",
+      "name": "Księgowość spółki z o.o. Zduńska Wola | Biuro Motylska",
+      "dateModified": "2026-09-01",
+      "inLanguage": "pl-PL",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://biuro-motylska.pl/#serwis",
+        "url": "https://biuro-motylska.pl/",
+        "name": "Biuro Rachunkowe Emilia Motylska"
+      },
+      "about": {
+        "@id": "https://biuro-motylska.pl/#biuro"
+      },
+      "publisher": {
+        "@id": "https://biuro-motylska.pl/#biuro"
       }
-    ]
-  }
+    }
+  ]
+}
   </script>
 
   <link rel="preload" href="/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin />

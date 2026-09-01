@@ -20,6 +20,16 @@
 - [KPiR i ryczałt](https://biuro-motylska.pl/kpir-ryczalt): księgowość uproszczona, dobór formy opodatkowania i rozliczenia roczne.
 - [Kadry i płace](https://biuro-motylska.pl/kadry-i-place): listy płac, umowy, akta osobowe oraz rozliczenia z ZUS i urzędem skarbowym.
 - [VAT i JPK](https://biuro-motylska.pl/vat-jpk): rejestracja i rozliczenia VAT, JPK_V7, VAT-UE, korekty oraz wsparcie dotyczące KSeF.
+- [KSeF i e-faktury](https://biuro-motylska.pl/ksef): przygotowanie firmy do Krajowego Systemu e-Faktur, nadawanie uprawnień, obieg dokumentów.
+- [Księgowość spółek z o.o.](https://biuro-motylska.pl/ksiegowosc-spolki-zoo): pełne księgi spółek, CIT-8, sprawozdanie finansowe, obsługa wspólników i zarządu.
+
+## Czym biuro się wyróżnia
+
+- Certyfikat księgowy Ministerstwa Finansów nr 20002/2007, wydany 14 marca 2007 roku na podstawie art. 76a ustawy o rachunkowości.
+- Obowiązkowe ubezpieczenie odpowiedzialności cywilnej za szkody wyrządzone w związku z prowadzoną działalnością.
+- Działalność prowadzona nieprzerwanie od stycznia 2009 roku.
+- Bezpłatna pierwsza konsultacja, w tym przed rejestracją działalności gospodarczej.
+- Obsługa jednoosobowych działalności, spółek cywilnych i spółek z ograniczoną odpowiedzialnością.
 
 ## Główne strony
 
@@ -33,4 +43,4 @@
 - E-mail: [biuro.motylska@gmail.com](mailto:biuro.motylska@gmail.com)
 - Strona: [https://biuro-motylska.pl/](https://biuro-motylska.pl/)
 
-Ostatnia aktualizacja: 2026-08-17
+Ostatnia aktualizacja: 2026-09-01

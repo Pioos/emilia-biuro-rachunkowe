@@ -59,68 +59,190 @@
   <!-- Schema.org – LocalBusiness / AccountingService -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "AccountingService",
-    "@id": "https://biuro-motylska.pl/#biuro",
-    "name": "Biuro Rachunkowe Emilia Motylska",
-    "alternateName": ["Biuro rachunkowe Motylska", "Motylska biuro rachunkowe"],
-    "url": "https://biuro-motylska.pl/",
-    "image": "https://biuro-motylska.pl/outside-v2.jpg",
-    "logo": "https://biuro-motylska.pl/logo.png",
-    "description": "Biuro rachunkowe w Zduńskiej Woli. Pełna księgowość, KPiR i ryczałt, kadry i płace, VAT i JPK dla firm i osób fizycznych. Certyfikat Ministerstwa Finansów nr 20002/2007.",
-    "telephone": "+48786333003",
-    "email": "biuro.motylska@gmail.com",
-    "vatID": "PL8291037821",
-    "taxID": "8291037821",
-    "currenciesAccepted": "PLN",
-    "paymentAccepted": "Przelew bankowy, gotówka",
-    "knowsLanguage": "pl",
-    "foundingDate": "2009-01",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "ul. Ignacego Jana Paderewskiego 3A",
-      "addressLocality": "Zduńska Wola",
-      "addressRegion": "łódzkie",
-      "postalCode": "98-220",
-      "addressCountry": "PL"
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "@id": "https://biuro-motylska.pl/#biuro",
+  "name": "Biuro Rachunkowe Emilia Motylska",
+  "alternateName": [
+    "Biuro rachunkowe Motylska",
+    "Motylska biuro rachunkowe"
+  ],
+  "url": "https://biuro-motylska.pl/",
+  "image": "https://biuro-motylska.pl/outside-v2.jpg",
+  "logo": "https://biuro-motylska.pl/logo.png",
+  "description": "Biuro rachunkowe w Zduńskiej Woli. Pełna księgowość, KPiR i ryczałt, kadry i płace, VAT i JPK dla firm i osób fizycznych. Certyfikat Ministerstwa Finansów nr 20002/2007.",
+  "telephone": "+48786333003",
+  "email": "biuro.motylska@gmail.com",
+  "vatID": "PL8291037821",
+  "taxID": "8291037821",
+  "currenciesAccepted": "PLN",
+  "paymentAccepted": "Przelew bankowy, gotówka",
+  "knowsLanguage": "pl",
+  "foundingDate": "2009-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Ignacego Jana Paderewskiego 3A",
+    "addressLocality": "Zduńska Wola",
+    "addressRegion": "łódzkie",
+    "postalCode": "98-220",
+    "addressCountry": "PL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.6012,
+    "longitude": 18.9392
+  },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Paderewskiego+3A,+98-220+Zdu%C5%84ska+Wola",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Zduńska Wola"
     },
-    "geo": {
+    {
+      "@type": "AdministrativeArea",
+      "name": "powiat zduńskowolski"
+    },
+    {
+      "@type": "City",
+      "name": "Sieradz"
+    },
+    {
+      "@type": "City",
+      "name": "Łask"
+    },
+    {
+      "@type": "City",
+      "name": "Szadek"
+    },
+    {
+      "@type": "City",
+      "name": "Zapolice"
+    },
+    {
+      "@type": "Country",
+      "name": "Polska"
+    }
+  ],
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
       "@type": "GeoCoordinates",
       "latitude": 51.6012,
       "longitude": 18.9392
     },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Paderewskiego+3A,+98-220+Zdu%C5%84ska+Wola",
-    "openingHoursSpecification": [
+    "geoRadius": "30000"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61581967757342",
+    "https://www.google.com/search?kgmid=/g/1tgh69my",
+    "https://aleo.com/pl/firma/biuro-rachunkowe-emilia-motylska-zdunska-wola",
+    "https://www.oferteo.pl/biuro-rachunkowe-emilia-motylska/firma/2117547"
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Certyfikat księgowy Ministerstwa Finansów",
+    "identifier": "20002/2007",
+    "dateCreated": "2007-03-14",
+    "recognizedBy": {
+      "@type": "GovernmentOrganization",
+      "name": "Ministerstwo Finansów Rzeczypospolitej Polskiej"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Usługi księgowe – Zduńska Wola",
+    "itemListElement": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "08:00",
-        "closes": "16:00"
-      }
-    ],
-    "areaServed": [
-      { "@type": "City", "name": "Zduńska Wola" },
-      { "@type": "AdministrativeArea", "name": "powiat zduńskowolski" },
-      { "@type": "City", "name": "Sieradz" },
-      { "@type": "City", "name": "Łask" },
-      { "@type": "City", "name": "Szadek" },
-      { "@type": "City", "name": "Zapolice" },
-      { "@type": "Country", "name": "Polska" }
-    ],
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 51.6012,
-        "longitude": 18.9392
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pełna księgowość",
+          "description": "Prowadzenie ksiąg rachunkowych zgodnie z ustawą o rachunkowości: bilans, rachunek zysków i strat, sprawozdania finansowe, sprawozdawczość GUS i NBP, ewidencja środków trwałych."
+        }
       },
-      "geoRadius": "30000"
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "KPiR i ryczałt",
+          "description": "Podatkowa księga przychodów i rozchodów, ewidencja przychodów dla ryczałtu ewidencjonowanego, karta podatkowa."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kadry i płace",
+          "description": "Obsługa kadrowo-płacowa: listy płac, deklaracje ZUS, PIT-11, ewidencja urlopów i zwolnień lekarskich, umowy o pracę i cywilnoprawne."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "VAT i JPK",
+          "description": "Rozliczenia podatku VAT, pliki JPK_V7M i JPK_V7K, rejestracja VAT-UE, korekty deklaracji, reprezentacja przed Urzędem Skarbowym."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Obsługa KSeF",
+          "url": "https://biuro-motylska.pl/ksef",
+          "description": "Przygotowanie firmy do KSeF, uporządkowanie uprawnień i obiegu e-faktur oraz bieżące wsparcie księgowe."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Księgowość spółki z o.o.",
+          "url": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo",
+          "description": "Księgi handlowe, CIT-8, VAT, sprawozdania finansowe oraz rozliczenia zarządu i pracowników."
+        }
+      }
+    ]
+  },
+  "founder": {
+    "@type": "Person",
+    "@id": "https://biuro-motylska.pl/#emilia-motylska",
+    "name": "Emilia Motylska",
+    "jobTitle": "Właścicielka biura rachunkowego",
+    "worksFor": {
+      "@id": "https://biuro-motylska.pl/#biuro"
     },
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61581967757342",
-      "https://www.google.com/search?kgmid=/g/1tgh69my",
-      "https://aleo.com/pl/firma/biuro-rachunkowe-emilia-motylska-zdunska-wola",
-      "https://www.oferteo.pl/biuro-rachunkowe-emilia-motylska/firma/2117547"
+    "knowsLanguage": "pl",
+    "knowsAbout": [
+      "księgowość",
+      "pełna księgowość",
+      "księgi rachunkowe",
+      "podatkowa księga przychodów i rozchodów",
+      "ryczałt od przychodów ewidencjonowanych",
+      "kadry i płace",
+      "rozliczenia ZUS",
+      "podatek VAT",
+      "pliki JPK_V7",
+      "Krajowy System e-Faktur (KSeF)",
+      "podatek CIT",
+      "podatek PIT",
+      "księgowość spółek z ograniczoną odpowiedzialnością",
+      "zakładanie działalności gospodarczej",
+      "sprawozdania finansowe"
     ],
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
@@ -131,69 +253,29 @@
         "@type": "GovernmentOrganization",
         "name": "Ministerstwo Finansów Rzeczypospolitej Polskiej"
       }
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Usługi księgowe – Zduńska Wola",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Pełna księgowość",
-            "description": "Prowadzenie ksiąg rachunkowych zgodnie z ustawą o rachunkowości: bilans, rachunek zysków i strat, sprawozdania finansowe, sprawozdawczość GUS i NBP, ewidencja środków trwałych."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "KPiR i ryczałt",
-            "description": "Podatkowa księga przychodów i rozchodów, ewidencja przychodów dla ryczałtu ewidencjonowanego, karta podatkowa."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Kadry i płace",
-            "description": "Obsługa kadrowo-płacowa: listy płac, deklaracje ZUS, PIT-11, ewidencja urlopów i zwolnień lekarskich, umowy o pracę i cywilnoprawne."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "VAT i JPK",
-            "description": "Rozliczenia podatku VAT, pliki JPK_V7M i JPK_V7K, rejestracja VAT-UE, korekty deklaracji, reprezentacja przed Urzędem Skarbowym."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Obsługa KSeF",
-            "url": "https://biuro-motylska.pl/ksef",
-            "description": "Przygotowanie firmy do KSeF, uporządkowanie uprawnień i obiegu e-faktur oraz bieżące wsparcie księgowe."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Księgowość spółki z o.o.",
-            "url": "https://biuro-motylska.pl/ksiegowosc-spolki-zoo",
-            "description": "Księgi handlowe, CIT-8, VAT, sprawozdania finansowe oraz rozliczenia zarządu i pracowników."
-          }
-        }
-      ]
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Emilia Motylska",
-      "jobTitle": "Właścicielka biura rachunkowego"
     }
+  },
+  "knowsAbout": [
+    "księgowość",
+    "pełna księgowość",
+    "księgi rachunkowe",
+    "podatkowa księga przychodów i rozchodów",
+    "ryczałt od przychodów ewidencjonowanych",
+    "kadry i płace",
+    "rozliczenia ZUS",
+    "podatek VAT",
+    "pliki JPK_V7",
+    "Krajowy System e-Faktur (KSeF)",
+    "podatek CIT",
+    "podatek PIT",
+    "księgowość spółek z ograniczoną odpowiedzialnością",
+    "zakładanie działalności gospodarczej",
+    "sprawozdania finansowe"
+  ],
+  "employee": {
+    "@id": "https://biuro-motylska.pl/#emilia-motylska"
   }
+}
   </script>
 
   <!-- Schema.org – FAQPage (treść musi odpowiadać sekcji #faq na stronie) -->
@@ -277,6 +359,31 @@
       }
     ]
   }
+  </script>
+
+  <!-- Schema.org – strona jako dokument (sygnał świeżości dla wyszukiwarek i modeli) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://biuro-motylska.pl/#strona",
+  "url": "https://biuro-motylska.pl/",
+  "name": "Biuro rachunkowe Zduńska Wola – księgowość, kadry i płace",
+  "dateModified": "2026-09-01",
+  "inLanguage": "pl-PL",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://biuro-motylska.pl/#serwis",
+    "url": "https://biuro-motylska.pl/",
+    "name": "Biuro Rachunkowe Emilia Motylska"
+  },
+  "about": {
+    "@id": "https://biuro-motylska.pl/#biuro"
+  },
+  "publisher": {
+    "@id": "https://biuro-motylska.pl/#biuro"
+  }
+}
   </script>
 
   <link rel="preload" href="/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin />
