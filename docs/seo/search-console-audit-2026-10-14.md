@@ -121,6 +121,22 @@ Brak dowodów na problem techniczny. Zapadka klikalności nie jest spowodowana i
 | E3 — wizytówka i opinie | `/` | **ZAMKNIĘTY: WSPARTY** (pozycja) | — | Kontynuować poza repo; monitorować kliknięcia osobno | — | Pozycja < 15 osiągnięta; nowy wskaźnik do śledzenia: kliknięcia/CTR na tej frazie |
 | **E4 (nowy) — mobile CTR na stronie głównej** | `/` | Mobile: 0 klik./52 wyśw./CTR 0%/poz. 7,7 (2026-09-14→10-11) | Do ustalenia po ręcznej inspekcji żywego renderowania mobile | CTR mobile > 0% przy stabilnej/lepszej pozycji | 28 dni po ewentualnej poprawce, lub kolejny regularny audyt (2026-11-11+) jeśli brak zmian | Odrzucenie, jeśli CTR mobile nadal 0% przy ≥50 wyśw. i poz. ≤10 po dwóch kolejnych oknach |
 
+## Wdrożone po akceptacji (2026-10-14, po publikacji audytu)
+
+Użytkownik zaakceptował wyłącznie poprawkę #2 (E2 — wzmocnienie sygnału linkowania do `/pelna-ksiegowosc`). Pozostałe cztery poprawki (#1, #3, #4, #5) pozostają niewdrożone, zgodnie z decyzją użytkownika.
+
+| Zmiana | Plik | Kotwica |
+| --- | --- | --- |
+| Nowy link kontekstowy w FAQ „Kiedy trzeba przejść na pełną księgowość?" | `index.html` | „pełną księgowość" |
+| Nowe zdanie łączące ewidencję VAT z pełnymi księgami rachunkowymi | `vat-jpk.html` | „pełne księgi rachunkowe" |
+| Nowe zdanie łączące listy płac z pełnymi księgami rachunkowymi | `kadry-i-place.html` | „pełne księgi rachunkowe" |
+
+Razem z linkiem już istniejącym w `ksiegowosc-spolki-zoo.html` (wdrożonym w poprzednim audycie), `/pelna-ksiegowosc` ma teraz 4 kontekstowe linki wewnętrzne z wariantami frazy „księgi rachunkowe" (poza linkami nawigacyjnymi i kartami usług).
+
+**Weryfikacja:** sprawdzono ręcznie, że wszystkie trzy edycje tworzą poprawny HTML (otwarte/zamknięte tagi `<a>`, akapity nienaruszone).
+
+**Plan pomiaru:** reguła decyzyjna E2 bez zmian — 28 dni po wdrożeniu, próg wsparcia: `/pelna-ksiegowosc` wyprzedza `/ksiegowosc-spolki-zoo` i `/` dla zapytania „księgi rachunkowe zduńska wola". Najbliższe sensowne okno oceny: od 2026-11-11.
+
 ## Ograniczenia danych
 
 - Serwis ma ~2,5 miesiąca historii — porównania 90-dniowe i rok-do-roku wciąż niemożliwe; jedyne miarodajne okno to 28 dni.
