@@ -43,9 +43,10 @@ Poprawki #1 (zapaść CTR na mobile na stronie głównej), #3 (świadome nic-nie
 
 ## Harmonogram
 
-- **Pierwsze faktyczne uruchomienie przez automatyzację:** 2026-11-17 (28 dni od publikacji poprawki #2 na produkcję, 2026-10-20)
-- **Cykl:** co 28 dni od tej daty
-- **Godzina:** 09:00, strefa `Europe/Warsaw`
+- **Status:** brak aktywnej automatyzacji. Próba założenia harmonogramu (CCR Routine, 2026-10-20) została usunięta tego samego dnia, ponieważ narzędzie `create_trigger` nie potrafiło przekazać konektora SearchConsole.ai do nowej sesji — automatyczny re-audyt bez niego nie zadziała. Jeśli chcesz to naprawić, trzeba założyć Routine ręcznie w interfejsie claude.ai (Routines UI), gdzie wiązanie konektorów działa poprawnie — tam konektor powinien się związać automatycznie.
+- **Docelowa data następnego re-audytu (ręcznego lub automatycznego, gdy zostanie poprawnie założony):** 2026-11-17 (28 dni od publikacji poprawki #2 na produkcję, 2026-10-20)
+- **Docelowy cykl:** co 28 dni od tej daty
+- **Docelowa godzina:** 09:00, strefa `Europe/Warsaw`
 - **Wymóg stabilności danych:** okno musi kończyć się przed `first_incomplete_date`, w praktyce co najmniej 3 dni przed uruchomieniem. Użyj `get_seo_audit_baseline` i potwierdź `data_quality.stable_window`.
 - **Uwaga dla przyszłego przebiegu:** po zakończeniu audytu i ewentualnym wdrożeniu poprawek, zaplanuj kolejne uruchomienie za 28 dni od **daty publikacji na produkcję**, nie od daty samego audytu — scalanie do `master` i wdrożenie bywają opóźnione względem napisania raportu (tak jak tutaj: audyt 2026-10-14, wdrożenie 2026-10-20).
 
