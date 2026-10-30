@@ -221,10 +221,20 @@ function saveConsent(analytics, marketing) {
    działa w trybie bezcookiesowym.
    ====================================================== */
 if (GA4_ID) {
-  const tag = document.createElement('script');
-  tag.async = true;
-  tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
-  document.head.appendChild(tag);
+  // Biblioteka gtag.js ładuje się dopiero po załadowaniu strony, żeby nie blokować pierwszego renderu.
+  // Wywołania gtag() poniżej trafiają do dataLayer i zostaną odczytane po jej załadowaniu.
+  const loadGtag = () => {
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+    document.head.appendChild(tag);
+  };
+  const scheduleGtag = () => {
+    if ('requestIdleCallback' in window) requestIdleCallback(loadGtag, { timeout: 3000 });
+    else setTimeout(loadGtag, 1500);
+  };
+  if (document.readyState === 'complete') scheduleGtag();
+  else window.addEventListener('load', scheduleGtag, { once: true });
 
   gtag('js', new Date());
   gtag('config', GA4_ID, { anonymize_ip: true });
